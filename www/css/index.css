@@ -72,6 +72,10 @@ body {
     background-size: cover;
 }
 
+body.exam-background {
+    background: none;
+}
+
 textarea {
     resize: none;
 }
@@ -592,4 +596,65 @@ a:hover, a:focus {
 
 #certificate-template-image {
     display: none;
+}
+
+#q-wrapper {
+    margin-top: -100px;
+}
+
+#examenvheader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    height: 60px;
+}
+
+#examenvheader .timer {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 20px;
+    background: #2f2727;
+    color: #eee;
+    border-radius: 4px;
+    float: right;
+    margin: 11px 25px;
+    font-weight: bold;
+}
+
+#examenvheader .timer.last5minalert {
+    color: red;
+}
+
+#rules-dialog {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(256, 256, 256, .9);
+    z-index: 9999;
+    padding: 100px 50px;
+}
+
+#rules-dialog .rules-dialog-inner-container {
+    padding: 20px 30px;
+    background: #fff;
+    font-size: 25px;
+    color: #000;
+    border: 5px solid #000;
+    border-radius: 15px;
+}
+
+#rules-dialog .rules-dialog-inner-container .title,
+#rules-dialog .rules-dialog-inner-container .footer {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+#rules-dialog .rules-dialog-inner-container .footer .start-exam-btn {
+    margin-top: 25px;
 }

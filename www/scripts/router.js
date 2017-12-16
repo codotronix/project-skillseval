@@ -7,41 +7,62 @@
 		.when("/home", {
 			templateUrl: "modules/home/homeTemplate.html",
 			controller: "homeController",
-			controllerAs: "vm"
+			controllerAs: "vm",
+			data: {
+				pageID: "HOME"
+			}
 		})
 
 
 		.when("/library/:libName", {
 			templateUrl: "modules/library/libraryTemplate.html",
 			controller: "libraryController",
-			controllerAs: "vm"
+			controllerAs: "vm",
+			data: {
+				pageID: "LIBRARY"
+			}
 		})
 		.when("/library/:libName/:topic", {
 			templateUrl: "modules/topic/topicTemplate.html",
 			controller: "topicController",
-			controllerAs: "vm"
+			controllerAs: "vm",
+			data: {
+				pageID: "TOPIC"
+			}
 		})
 		.when("/examenv", {
 			templateUrl: "modules/exam/examTemplate.html",
 			controller: "examController",
-			controllerAs: "vm"
+			controllerAs: "vm",
+			data: {
+				pageID: "EXAMENV"
+			}
 		})
 		.when("/examresult", {
 			templateUrl: "modules/exam/examResultTemplate.html",
 			controller: "examResultController",
-			controllerAs: "vm"
+			controllerAs: "vm",
+			data: {
+				pageID: "EXAMRESULT"
+			}
 		})
 
 		.when("/exam/certificate", {
 			templateUrl: "modules/exam/certificateTemplate.html",
 			controller: "certController",
-			controllerAs: "vm"
+			controllerAs: "vm",
+			data: {
+				pageID: "CERTIFICATE"
+			}
 		})
 
 		.when("/exam/viewcertificate", {
 			templateUrl: "modules/exam/viewCertificateTemplate.html",
 			controller: "viewCertController",
-			controllerAs: "vm"
+			controllerAs: "vm",
+			data: {
+				pageID: "VIEWCERTIFICATE"
+			}
 		})
 
 		.when("/", {

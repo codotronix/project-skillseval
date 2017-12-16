@@ -19,31 +19,31 @@
                     "subType": "Micro",
                     "examCode": examCodeExt + "-0",
                     "noOfQuestions": 10,
-                    "totalTime": "15 min"
+                    "totalTime": "00:15:00"
                 },
                 {
                     "subType": "Mini",
                     "examCode": examCodeExt + "-1",
                     "noOfQuestions": 30,
-                    "totalTime": "45 min"
+                    "totalTime": "00:45:00"
                 },
                 {
                     "subType": "Standard",
                     "examCode": examCodeExt + "-2",
                     "noOfQuestions": 60,
-                    "totalTime": "1 hr 30 min"
+                    "totalTime": "01:30:00"
                 },
                 {
                     "subType": "Macro",
                     "examCode": examCodeExt + "-3",
                     "noOfQuestions": 80,
-                    "totalTime": "2 hr"
+                    "totalTime": "02:00:00"
                 },
                 {
                     "subType": "Major",
                     "examCode": examCodeExt + "-4",
                     "noOfQuestions": 100,
-                    "totalTime": "2 hr 30 min"
+                    "totalTime": "02:30:00"
                 }
             ];
 		}

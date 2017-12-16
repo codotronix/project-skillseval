@@ -18,6 +18,7 @@
             result: undefined
         };
 
+
         var optionIndices = 'ABCDEFGHIJKLMNOP';
 
         return {
@@ -37,7 +38,12 @@
 
         function startExam () {
             currentExam.running = true;
+            //_deductTime();
         }
+
+        // function _deductTime () {
+
+        // }
 
         function setCurrentExam (cf) {
             for (var i in cf) {
@@ -90,7 +96,13 @@
             return resultQ;
         }
 
+
+        /*
+        * Get result is called when user clicks on submit button
+        */
         function getResult (qs) {
+            currentExam.running = false;
+
             var correct = 0, 
             //incorrect = 0, 
             notAnswered = 0, 

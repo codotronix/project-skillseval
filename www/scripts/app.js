@@ -14,6 +14,9 @@
             $rootScope.isMobileApp = true;
         }
 
+        /*
+        * When a route change is starting
+        */
         $rootScope.$on("$locationChangeStart", function(event, nextUrl, currentUrl) {
             //if(nextUrl.indexOf('route1')!==-1){
                 //console.log('locationChangeStart detected');
@@ -27,6 +30,15 @@
                 console.log("Can't use browser navigation from Exam Environment...");
             }
         });
+
+        /*
+        * When a route change is successful
+        */
+        $rootScope.$on("$routeChangeSuccess", function(event, nextUrl, currentUrl) {
+            //console.log(event);
+            $rootScope.pageID = nextUrl.$$route.data.pageID;
+        });
+
 
         //var prevPageY = 0;
         $(document).on('scroll', function(e){

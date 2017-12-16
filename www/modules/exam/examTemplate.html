@@ -1,21 +1,49 @@
-<div id="q-wrapper">
-    
-    <div class="qa-panel panel panel-default" data-ng-repeat="qa in vm.questions">
-        <div class="panel-heading">
-            <div class="panel-title">
-                <pre><b>{{"[Q " + ($index+1) + "] "}}</b>{{qa.q.trim()}}</pre>
-            </div>
+<div id="rules-dialog" data-ng-show="!vm.rulesDialogHidden">
+    <div class="rules-dialog-inner-container">
+        <div class="title">Exam Rules</div>
+        <ul>
+            <li>
+                To leave the exam anytime click on either "Submit" or "Abort" button located at the bottom of the page
+            </li>
+            <li>
+                This is a free tool for self evaluation. So, cheat if you want,  no one cares.
+            </li>
+        </ul>
+
+        <div class="footer">
+            <span>Good Luck!</span>
+            <br/>
+            <button type="button" class="btn btn-primary btn-lg start-exam-btn" data-ng-click="vm.startExam()">Start Exam</button>
         </div>
-        <div class="panel-body options-container" data-ng-init="qa.chosenAns='Z'">
-            <div data-ng-repeat="op in qa.options">
-                <pre><input type="radio" value="{{vm.optionIndices[$index]}}" data-ng-model="qa.chosenAns"> {{vm.optionIndices[$index] + ". " + op.trim()}}</pre>                
+
+        
+    </div>
+</div>
+
+<div data-ng-show="!!vm.rulesDialogHidden">
+    <div id="examenvheader">
+        <div class="timer font-electrolize" data-ng-class="{'last5minalert': vm.last5minLeft}">
+            {{vm.displayTime}}
+        </div>
+    </div>
+    <!-- Wrapper to contain ALL THE QUESTIONS -->
+    <div id="q-wrapper">    
+        <div class="qa-panel panel panel-default" data-ng-repeat="qa in vm.questions">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    <pre><b>{{"[Q " + ($index+1) + "] "}}</b>{{qa.q.trim()}}</pre>
+                </div>
             </div>
-            <div>
-                <pre><input type="radio" value="Z" data-ng-model="qa.chosenAns"> Z. I don't want to answer</pre> 
+            <div class="panel-body options-container" data-ng-init="qa.chosenAns='Z'">
+                <div data-ng-repeat="op in qa.options">
+                    <pre><input type="radio" value="{{vm.optionIndices[$index]}}" data-ng-model="qa.chosenAns"> {{vm.optionIndices[$index] + ". " + op.trim()}}</pre>                
+                </div>
+                <div>
+                    <pre><input type="radio" value="Z" data-ng-model="qa.chosenAns"> Z. I don't want to answer</pre> 
+                </div>
             </div>
         </div>
     </div>
-
+    <button type="button" data-ng-click="vm.abortExam()">Abort</button>
+    <button type="button" data-ng-click="vm.submitExam()">Submit</button>
 </div>
-<button type="button" data-ng-click="vm.abortExam()">Abort</button>
-<button type="button" data-ng-click="vm.submitExam()">Submit</button>

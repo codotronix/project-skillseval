@@ -39,7 +39,12 @@
         <title>KNEXAA - Knowledge.Exam.Anytime.Anywhere</title>
     </head>
 
-    <body data-ng-controller="mainController as mvm" data-ng-class="{'app': !!$root.isMobileApp, 'web': !$root.isMobileApp}">
+    <body data-ng-controller="mainController as mvm" 
+    data-ng-class="{
+    'app': !!$root.isMobileApp, 
+    'web': !$root.isMobileApp,
+    'exam-background': $root.pageID === 'EXAMENV'}">
+
         <div data-ng-include="'partials/loading.html'" class="no-print"></div>
         <div data-ng-include="'partials/header.html'" class="no-print"></div>
         <div class="container-fluid main-container">            
@@ -61,7 +66,7 @@
         <script type="text/javascript" src="scripts/properties.js"></script>
         
         <!-- Following Files are Merged and Minified -->
-        <!-- 
+        
         <script type="text/javascript" src="scripts/app.js"></script>      
         <script type="text/javascript" src="modules/common/secretService.js"></script>
         <script type="text/javascript" src="modules/common/modalService.js"></script>
@@ -80,14 +85,14 @@
         <script type="text/javascript" src="modules/topic/topicService.js"></script>
         <script type="text/javascript" src="modules/topic/topicController.js"></script>
         <script type="text/javascript" src="scripts/router.js"></script>
-       -->
+      
         
         <!-- Minified JS Files -->
-        <script type="text/javascript" src="dist/js/nexaa.js"></script>
+        <!-- <script type="text/javascript" src="dist/js/nexaa.js"></script>
         <script type="text/javascript" src="dist/js/templates.js"></script>
 
         <script type="text/javascript" src="js/nexaa.js"></script>
-        <script type="text/javascript" src="js/templates.js"></script>
+        <script type="text/javascript" src="js/templates.js"></script> -->
 
     </body>
 </html>
