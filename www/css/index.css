@@ -137,6 +137,10 @@ a:hover, a:focus {
     margin-top: 60px;
 }
 
+.border-bottom-light: {
+    border-bottom: 1px solid #ccc;
+}
+
 .center {
   text-align: center;
 }
@@ -147,6 +151,10 @@ a:hover, a:focus {
 
 .margin-15 {
     margin: 15px;
+}
+
+.no-border {
+    border: none !important;
 }
 
 .loading-modal {
@@ -614,16 +622,23 @@ a:hover, a:focus {
     height: 60px;
 }
 
+#examenvheader .small-logo {
+    width: 50px;
+    margin: 4px 5px;
+}
+
 #examenvheader .timer {
     display: inline-block;
-    padding: 5px 10px;
+    padding: 5px 0;
     font-size: 20px;
-    background: #2f2727;
+    background: #4b00ff;
     color: #eee;
     border-radius: 4px;
     float: right;
     margin: 11px 25px;
     font-weight: bold;
+    width: 110px;
+    text-align: center;
 }
 
 #examenvheader .timer.last5minalert {
@@ -639,6 +654,7 @@ a:hover, a:focus {
     background: rgba(256, 256, 256, .9);
     z-index: 9999;
     padding: 100px 50px;
+    overflow: auto;
 }
 
 #rules-dialog .rules-dialog-inner-container {
@@ -664,4 +680,9 @@ a:hover, a:focus {
 
 #examenvbody .button-footer {
     padding: 0 5px 60px 5px;
+}
+
+.exam-stats .panel-body div {
+    border-bottom: 1px solid #ccc;
+    padding: 5px 15px;
 }
