@@ -47,10 +47,10 @@ gulp.task('removeDevScripts', function () {
         <script type="text/javascript" src="js/templates.js"></script>
     `;
 
-    return gulp.src('www/webindex.html')
+    return gulp.src('www/index.html')
     .pipe(gulpRemoveHtml())
     .pipe(inject.after('<!--MinJSGulp-->', minJS))
-    .pipe(rename('index.html'))
+    //.pipe(rename('index.html'))
     .pipe(gulp.dest('www/dist/'));
 
 });

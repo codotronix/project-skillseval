@@ -5,7 +5,7 @@
 
     function examController (examService, $location, modalService, $timeout) {
         var vm = this;
-        vm.abortExam = examService.abortExam;
+        vm.abortExam = abortExam;
         vm.startExam = startExam;
         vm.rulesDialogHidden = false;
         vm.submitExam = submitExam;
@@ -14,6 +14,7 @@
         vm.displayTime = "00:00:00";
         vm.last5minLeft = false;
         var currentTime;
+        var totalTime;
         
         init();
 
@@ -35,10 +36,16 @@
         }
 
         function startExam () {
-            currentTime = convertToSec(examService.getCurrentExam().totalTime);
+            totalTime = convertToSec(examService.getCurrentExam().totalTime);
+            currentTime = totalTime;
             examService.startExam();
             vm.rulesDialogHidden = true;
             _countDown();
+        }
+
+        function abortExam () {
+            examService.abortExam();
+            $location.path('/');
         }
 
         /*
@@ -48,7 +55,7 @@
         function _countDown () {
             var now = (new Date()).getTime();
             if((now - tempLastTime) >= 1000) {
-                _formatDisplayTime(--currentTime);
+                vm.displayTime = _formatDisplayTime(--currentTime);
                 tempLastTime = now;
 
                 if(currentTime < 300) {
@@ -78,7 +85,7 @@
             m = (m.length < 2) ? "0" + m: m;
             s = (s.length < 2) ? "0" + s: s;
 
-            vm.displayTime = h + ":" + m + ":" + s;
+            return (h + ":" + m + ":" + s);
         }
 
 
@@ -92,6 +99,8 @@
 
         function submitExam () {
             examService.getCurrentExam().running = false;
+            examService.getCurrentExam().timeTaken = _formatDisplayTime(totalTime - currentTime);
+            //examService.getCurrentExam().
             modalService.showLoader();
             //console.log(vm.questions);
             var result = examService.getResult(vm.questions);

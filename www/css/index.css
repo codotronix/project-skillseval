@@ -145,6 +145,10 @@ a:hover, a:focus {
     padding: 0;
 }
 
+.margin-15 {
+    margin: 15px;
+}
+
 .loading-modal {
     display: block;
     background: #6767E6;
@@ -487,7 +491,6 @@ a:hover, a:focus {
 
 .qa-panel {
     border-color: #6767e6;
-    margin-top: 25px;
     font-family: 'Electrolize', cursive;
 }
 
@@ -599,7 +602,7 @@ a:hover, a:focus {
 }
 
 #q-wrapper {
-    margin-top: -100px;
+    margin-top: -65px;
 }
 
 #examenvheader {
@@ -657,4 +660,8 @@ a:hover, a:focus {
 
 #rules-dialog .rules-dialog-inner-container .footer .start-exam-btn {
     margin-top: 25px;
+}
+
+#examenvbody .button-footer {
+    padding: 0 5px 60px 5px;
 }

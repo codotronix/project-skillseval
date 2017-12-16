@@ -4,7 +4,7 @@
     <div class="col-xs-12 col-sm-6 col-md-6">
         <div class="panel panel-primary">
             <div class="panel-heading collapse-header">
-                Result
+                <b>Result</b>
             </div>
             <div class="panel-body collapse-body">
                 <div class="col-xs-10 col-sm-9 col-md-7">
@@ -37,17 +37,24 @@
                 </div>
 
                 <div class="col-xs-10 col-sm-9 col-md-7">
+                    Score: 
+                </div>
+                <div class="col-xs-2 col-sm-3 col-md-5">
+                    {{vm.percentScore}} %
+                </div>
+
+                <div class="col-xs-10 col-sm-9 col-md-7">
                     Total Time: 
                 </div>
                 <div class="col-xs-2 col-sm-3 col-md-5">
-                    {{vm.currentExam.result.totalTime || '-'}}
+                    {{vm.currentExam.totalTime || '-'}}
                 </div>
 
                 <div class="col-xs-10 col-sm-9 col-md-7">
                     Time Taken: 
                 </div>
                 <div class="col-xs-2 col-sm-3 col-md-5">
-                    {{vm.currentExam.result.timeTaken || '-'}}
+                    {{vm.currentExam.timeTaken || '-'}}
                 </div>
             </div>
         </div>
@@ -59,9 +66,11 @@
     <div class="col-xs-12 col-sm-6 col-md-6">
         <div class="panel panel-primary">
             <div class="panel-heading collapse-header">
-                Marksheet and Certificate
+                <b>Marksheet and Certificate</b>
             </div>
-            <div class="panel-body collapse-body">
+
+            <!-- If percentage > 70, then only marksheet and certificate -->
+            <div class="panel-body collapse-body" data-ng-if="vm.percentScore >= 70">
 
                 <div data-ng-show="!vm.certificateLink">
                     <div class="col-xs-12">
@@ -90,6 +99,15 @@
                     </div>
                 </div>
             </div>
+
+            <!-- No Certificate for score less than 70 -->
+            <div class="panel-body collapse-body" data-ng-if="vm.percentScore < 70">
+                <label>Sorry, you need to score atleast 70% to generate Result and Marksheet</label>
+
+                <div>
+                    <a href="#!/" class="btn btn-primary btn-lg pull-right">Back</a>
+                </div>
+            </div>
         </div>
     </div>
     <!-- ******************************************************* -->
@@ -97,6 +115,8 @@
 
 
     <!-- The Detailed QA -->
+    <div class="heading col-xs-12 col-sm-12 col-md-12" data-ng-if="vm.wrongQAs.length > 0">What went wrong ?</div>
+
     <div class="col-xs-12">
         <div class="qa-panel panel panel-primary" data-ng-repeat="qa in vm.wrongQAs">
             <div class="panel-heading collapse-header">
@@ -115,4 +135,7 @@
     </div>
 
 </div>
-<a href="#!/" type="btn btn-default">Back</a>
+
+<div class="col-xs-12 margin-15">
+    <a href="#!/" class="btn btn-primary btn-lg">Back</a>
+</div>

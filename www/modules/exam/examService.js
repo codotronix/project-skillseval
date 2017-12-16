@@ -14,7 +14,7 @@
             examName: undefined,
             totalTime: undefined,
             noOfQuestions: undefined,
-            timeLapse: undefined,
+            timeTaken: undefined,
             result: undefined
         };
 
@@ -52,7 +52,8 @@
         }
 
         function abortExam () {
-            currentExam.running = false;
+            currentExam = {}; 
+                       
         }
 
         function getOptionIndices () {

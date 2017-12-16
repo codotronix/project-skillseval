@@ -17,11 +17,15 @@
         function init () {
             if (vm.currentExam && vm.currentExam.result) {
                 vm.wrongQAs = vm.currentExam.result.incorrectQs;
+                vm.percentScore = Math.floor(vm.currentExam.result.correct * 100 / vm.currentExam.result.totalQ);
             }
             else {
                 //redirect to library index page
             }
-
+            setTimeout(function() {
+                $(document).scrollTop(0);
+            }, 300);
+            
             modalService.hideLoader();
         }
 
