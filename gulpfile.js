@@ -1,6 +1,9 @@
 var gulp  = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
+    gulpRemoveHtml = require('gulp-remove-html'),
+    rename = require("gulp-rename"),
+    inject = require('gulp-inject-string'),
     javascriptObfuscator = require('gulp-javascript-obfuscator'),
     templateCache = require('gulp-angular-templatecache');
 
@@ -34,6 +37,25 @@ gulp.task('createTemplateCache', function () {
 });
 
 
+//Delete development scripts from index.html
+gulp.task('removeDevScripts', function () {
+    var minJS = `
+        <script type="text/javascript" src="dist/js/nexaa.js"></script>
+        <script type="text/javascript" src="dist/js/templates.js"></script>
+
+        <script type="text/javascript" src="js/nexaa.js"></script>
+        <script type="text/javascript" src="js/templates.js"></script>
+    `;
+
+    return gulp.src('www/webindex.html')
+    .pipe(gulpRemoveHtml())
+    .pipe(inject.after('<!--MinJSGulp-->', minJS))
+    .pipe(rename('index.html'))
+    .pipe(gulp.dest('www/dist/'));
+
+});
+
+
 // Copy all static assets
 gulp.task('copyAssets', function() {
     gulp.src('www/configs/**')
@@ -60,13 +82,13 @@ gulp.task('copyAssets', function() {
     gulp.src(['www/scripts/**', '!www/scripts/app.js', '!www/scripts/router.js'])
     .pipe(gulp.dest('www/dist/scripts'));
 
-    gulp.src('www/index.html')
-    .pipe(gulp.dest('www/dist'));
+    // gulp.src('www/index.html')
+    // .pipe(gulp.dest('www/dist'));
 });
 
 
 // create a default task and just log a message
-gulp.task('default', ['concatScripts', 'createTemplateCache', 'copyAssets'], function () {
+gulp.task('default', ['concatScripts', 'createTemplateCache', 'removeDevScripts','copyAssets'], function () {
     dataProcessor.start();
     console.log("Gulping Done...");
 });
