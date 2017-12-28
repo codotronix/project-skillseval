@@ -81,5 +81,19 @@
         margin-top: 30px;
         font-size: 9px;
     }
+
+    #rules-dialog {
+        padding: 100px 25px;
+    }
+
+    #rules-dialog .rules-dialog-inner-container {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    #rules-dialog .rules-dialog-inner-container .title,
+    #rules-dialog .rules-dialog-inner-container .footer {
+        font-size: 25px;
+    }
 }
 /************* END OF MEDIA QUERIES ***************************/
