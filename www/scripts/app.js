@@ -1,5 +1,5 @@
 (function(){
-    angular.module("skillseval", ['ngRoute'])
+    angular.module("skillseval", ['ngRoute', 'ngStorage'])
 
     .run(["$rootScope", "examService", function ($rootScope, examService) {
 

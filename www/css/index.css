@@ -204,8 +204,41 @@ a:hover, a:focus {
     height: 124px;
 }
 
+.thick-header .user-profile {
+    float: right;
+    margin-right: 5px;
+}
+
+.thick-header .user-profile .profile-img-holder {
+    height: 90px;
+    width: 100px;
+    overflow: hidden;
+    text-align: center;
+    /* padding: 5px; */
+    background: #4b00ff;
+}
+
+.thick-header .user-profile .profile-img-holder .profile-img {
+    height: 80px;
+    width: 80px;
+    /*border-radius: 50%;*/
+}
+
+.thick-header .user-profile .show-profile {
+    text-align: center;
+    color: #fff;
+    background: #4b00ff;
+    border-top: 2px solid #000;
+}
+
+.thick-header .user-profile .show-profile:hover {
+    color: #000;
+    background: #fff;
+}
+
 .thin-header {
     height: 0;
+    padding: 0;
 }
 
 .scrollingDown .thick-header {
