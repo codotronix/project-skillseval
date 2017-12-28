@@ -13,6 +13,13 @@
 			}
 		})
 
+		.when("/settings", {
+			templateUrl: "modules/settings/settingsTemplate.html",
+			data: {
+				pageID: "SETTINGS"
+			}
+		})
+
 
 		.when("/library/:libName", {
 			templateUrl: "modules/library/libraryTemplate.html",

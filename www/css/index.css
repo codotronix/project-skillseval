@@ -149,6 +149,10 @@ a:hover, a:focus {
     padding: 0;
 }
 
+.padding-left-20 {
+    padding-left: 20px;
+}
+
 .margin-15 {
     margin: 15px;
 }
@@ -216,6 +220,7 @@ a:hover, a:focus {
     text-align: center;
     /* padding: 5px; */
     background: #4b00ff;
+    border-radius: 4px;
 }
 
 .thick-header .user-profile .profile-img-holder .profile-img {
@@ -229,6 +234,7 @@ a:hover, a:focus {
     color: #fff;
     background: #4b00ff;
     border-top: 2px solid #000;
+    display: block;
 }
 
 .thick-header .user-profile .show-profile:hover {
@@ -718,4 +724,32 @@ a:hover, a:focus {
 .exam-stats .panel-body div {
     border-bottom: 1px solid #ccc;
     padding: 5px 15px;
+}
+
+.left-menu-panel {
+    position: absolute;
+    top: 125px;
+    bottom: 0;
+    left: 0;
+    width: 250px;
+    background: rgba(0,0,0,.7);
+}
+
+.panel-view-area {
+    position: absolute;
+    top: 125px;
+    left: 250px;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, .7);
+    padding: 30px 10px;
+    color: #000;
+}
+
+.img-url-result-img {
+    border: 1px solid #000;
+    height: 80px;
+    width: 80px;
+    float: left;
+    margin-right: 10px;
 }

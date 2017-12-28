@@ -2,11 +2,15 @@
 /***************************************************************
 * MEDIA QUERIES START HERE
 ***************************************************************/
-@media (max-width: 767px) {
+@media (max-width: 600px) {
+
     body {
         background-position: -385px 0;
     }
+}
 
+@media (max-width: 767px) {
+    
     .header {
         text-align: center;
     }
