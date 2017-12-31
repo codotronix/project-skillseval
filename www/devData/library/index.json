@@ -7,28 +7,35 @@
 			"name": "Coding"
 		},
 		{
-			"name": "Engineering"
+			"name": "Engineering",
+			"notImplemented": true
 		},
 		{
 			"name": "Aptitude & Reasoning",
-			"subjectType": "topic"
+			"subjectType": "topic",
+			"notImplemented": true
 		},
 		{
 			"name": "English",
-			"subjectType": "topic"
+			"subjectType": "topic",
+			"notImplemented": true
 		},
 		{
-			"name": "Mathematics"
+			"name": "Mathematics",
+			"notImplemented": true
 		},
 		{
 			"name": "General Knowledge",
-			"subjectType": "topic"
+			"subjectType": "topic",
+			"notImplemented": true
 		},
 		{
-			"name": "MBA"
+			"name": "MBA",
+			"notImplemented": true
 		},
 		{
-			"name": "Science"
+			"name": "Science",
+			"notImplemented": true
 		}
 	]
 }

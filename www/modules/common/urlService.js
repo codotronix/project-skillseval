@@ -1,9 +1,9 @@
 (function(){
 	angular.module("skillseval").factory("urlService", urlService);
 	
-	urlService.$inject = ["$window"];
+	urlService.$inject = ["$window", "secretService"];
 
-	function urlService ($window) {
+	function urlService ($window, secretService) {
 		var hostType = angular._9.hostType;
 		var appRoot = angular._9.appRoot;
 		var webRoot = angular._9.webRoot;
@@ -41,7 +41,7 @@
 		}
 
 		function getPathToLibrary (libName) {
-			var pathToLib = angular._9.xlib[libName] || "library";
+			var pathToLib = angular._9.xlib[libName] || "raw:library";
 			
 			//If does not start with raw, then must be encoded
 			if (pathToLib.substr(0,4) !== "raw:") {

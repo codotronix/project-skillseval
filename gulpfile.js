@@ -10,6 +10,13 @@ var gulp  = require('gulp'),
 //Now requiring custom modules
 var dataProcessor = require('./tools/node-tools/data-processor/process');
  
+/*
+* Encrypt all data files from devData and put them in data folder
+*/
+gulp.task('devDataToDataProcess', function () {
+    dataProcessor.start();
+});
+
 //Process script files
 gulp.task('concatScripts', function() {
   return gulp.src([
@@ -88,7 +95,6 @@ gulp.task('copyAssets', function() {
 
 
 // create a default task and just log a message
-gulp.task('default', ['concatScripts', 'createTemplateCache', 'removeDevScripts','copyAssets'], function () {
-    dataProcessor.start();
-    console.log("Gulping Done...");
+gulp.task('default', ['devDataToDataProcess', 'concatScripts', 'createTemplateCache', 'removeDevScripts','copyAssets'], function () {
+    
 });

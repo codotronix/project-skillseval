@@ -18,25 +18,31 @@
 			"name": "Java"
 		},
 		{
-			"name": "Python"
+			"name": "Python",
+			"notImplemented": true
 		},
 		{
 			"name": "Javascript",
-			"path": "js"
+			"path": "js",
+			"notImplemented": true
 		},
 		{
 			"name": "AngularJS",
-			"path": "angularjs"
+			"path": "angularjs",
+			"notImplemented": true
 		},
 		{
 			"name": "Node.js",
-			"path": "nodejs"
+			"path": "nodejs",
+			"notImplemented": true
 		},
 		{
-			"name": "HTML"
+			"name": "HTML",
+			"notImplemented": true
 		},
 		{
-			"name": "CSS"
+			"name": "CSS",
+			"notImplemented": true
 		}
 	]
 }

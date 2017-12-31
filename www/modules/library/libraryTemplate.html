@@ -5,7 +5,10 @@
 
     <div class="">
     	<div data-ng-repeat="item in vm.library.list" class="lib-card col-xs-12 col-sm-4 col-md-3">
-    		<div class="inner-container" data-ng-click="vm.goTo(item)">
+    		<div class="inner-container" 
+            data-ng-click="vm.goTo(item)"
+            data-ng-class="{'coming-soon-tag': item.notImplemented}">
+                <span class="coming-soon-text">Coming Soon</span>
     			<label class="title font-aldrich" data-ng-bind="item.name"></label>
     			<!-- <a href="#!/library/{{item.name.toLowerCase()}}" class="button font-electrolize" data-ng-if="item.subjectType === 'library'">Show Subjects</a>
     			<a href="#!/library/{{item.libName.toLowerCase()}}/{{item.name.toLowerCase()}}" class="button font-electrolize" data-ng-if="item.subjectType === 'topic'">Show Exams</a> -->

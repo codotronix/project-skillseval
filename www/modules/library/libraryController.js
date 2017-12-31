@@ -63,6 +63,8 @@
 
 		//Navigate to Next Page
 		function goTo (item) {
+			if(item.notImplemented) { return; }
+			 
 			var url = '/library/';
 
 			if (item.subjectType === 'library') {

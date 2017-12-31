@@ -99,5 +99,41 @@
     #rules-dialog .rules-dialog-inner-container .footer {
         font-size: 25px;
     }
+
+    .thick-header .user-profile {
+        margin-right: -5px;
+    }
+
+    .thick-header .user-profile .profile-img-holder,
+    .thick-header .user-profile .show-profile .down {
+        display: none;
+    }
+
+    .thick-header .user-profile .show-profile .left {
+        display: inline;
+    }
+
+    .thick-header .user-profile .show-profile {
+        position: absolute;
+        top: -2px;
+        bottom: 0;
+        right: 0;
+        width: 20px;
+        padding-top: 55px;
+        background: #4b00ff !important;
+        color: #fff !important;
+    }
+
+    .left-menu-panel {
+        width: 0;
+    }
+
+    .panel-view-area {
+        left: 0;
+    }
+
+    .panel-view-area .show-hide-left-menu {
+        display: inline-block;
+    }
 }
 /************* END OF MEDIA QUERIES ***************************/
