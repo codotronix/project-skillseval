@@ -218,13 +218,13 @@ a:hover, a:focus {
     width: 100px;
     overflow: hidden;
     text-align: center;
-    /* padding: 5px; */
+    padding: 5px; 
     background: #4b00ff;
     border-radius: 4px;
 }
 
 .thick-header .user-profile .profile-img-holder .profile-img {
-    height: 80px;
+    height: 70px;
     width: 80px;
     /*border-radius: 50%;*/
 }
