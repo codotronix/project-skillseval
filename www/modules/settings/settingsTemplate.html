@@ -35,16 +35,23 @@
                     Image URL
                 </label>
                 <div class="col-xs-12 col-sm-12 col-md-12">
-                    <input type="text" placeholder="Image URL" class="form-control" />
+                    <!-- <div class="input-group"> -->
+                        <input type="text" class="form-control" placeholder="Image URL" data-ng-model="vm.user.imgUrl" data-ng-change="vm.updateImg()"/>
+                        <!-- <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" data-ng-click="vm.updateImg()">Update</button>
+                        </span> -->
+                    <!-- </div> -->
                 </div>
             </div>
 
 
             <div class="col-xs-12 col-sm-12 col-md-12 margin-top-15">
                 <div class="col-xs-12 col-sm-12 col-md-12">
-                    <img src="" class="img-url-result-img" />
+                    <div class="img-url-result-img">
+                        <img id="trial-img-profile" src="images/default-profile-white.png" class="img-responsive" />
+                    </div>
                     <span>
-                    Create an image in Imgur or anywhere you like, copy the image url by right clicking on the image and paste it the Image URL box above.
+                    Upload an image in Imgur / Google Drive / Dropbox / Blogger or anywhere you like. Copy the image url by right clicking on the image. Then paste it the Image URL box above.
                     </span>
                 </div>
             </div>

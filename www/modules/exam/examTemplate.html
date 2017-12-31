@@ -46,7 +46,7 @@
                     <pre data-ng-show="(op.indexOf('\n') >= 0 || op.indexOf('br>') >= 0)"><input type="radio" value="{{vm.optionIndices[$index]}}" data-ng-model="qa.chosenAns"> {{vm.optionIndices[$index] + ". " + op.trim()}}</pre>
 
 
-                    <span data-ng-show="(op.indexOf('\n') < 0 && op.indexOf('br>') < 0)">
+                    <span data-ng-show="(op.indexOf('\n') < 0 && op.indexOf('br>') < 0)" class="option-radio-container">
                         <input type="radio" value="{{vm.optionIndices[$index]}}" data-ng-model="qa.chosenAns"> {{vm.optionIndices[$index] + ". " + op.trim()}}
                     </span>
 

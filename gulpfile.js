@@ -94,7 +94,21 @@ gulp.task('copyAssets', function() {
 });
 
 
-// create a default task and just log a message
-gulp.task('default', ['devDataToDataProcess', 'concatScripts', 'createTemplateCache', 'removeDevScripts','copyAssets'], function () {
-    
+// This processes data 
+// and then builds the code
+gulp.task('all', ['devDataToDataProcess', 'concatScripts', 'createTemplateCache', 'removeDevScripts','copyAssets'], function () {
+    console.log('"gulp all" builds code+data, if you only needs to build the code, type "gulp code"');
 });
+
+//This only build the code
+//NOT Data
+//Because most of the time we only need the code to be updated, while data remains same
+gulp.task('code', ['concatScripts', 'createTemplateCache', 'removeDevScripts','copyAssets'], function () {
+    console.log('"gulp code" only builds the code, not the data, if you need to build code+data, type "gulp all"');
+});
+
+//same as "gulp code"
+gulp.task('default', ['code'], function () {
+    console.log('gulp (default) only builds the code, i.e. same as "gulp code", not the data, if you need to build code+data, type "gulp all"');
+});
+

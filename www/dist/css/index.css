@@ -218,13 +218,13 @@ a:hover, a:focus {
     width: 100px;
     overflow: hidden;
     text-align: center;
-    /* padding: 5px; */
+    padding: 5px; 
     background: #4b00ff;
     border-radius: 4px;
 }
 
 .thick-header .user-profile .profile-img-holder .profile-img {
-    height: 80px;
+    height: 70px;
     width: 80px;
     /*border-radius: 50%;*/
 }
@@ -543,7 +543,8 @@ a:hover, a:focus {
 
 .qa-panel {
     border-color: #6767e6;
-    font-family: 'Electrolize', cursive;
+    /*font-family: 'Electrolize', cursive;*/
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .qa-panel .panel-heading,
@@ -555,6 +556,17 @@ a:hover, a:focus {
 
 .qa-panel .options-container input[type="radio"] {
     vertical-align: text-bottom;
+}
+
+.qa-panel .options-container .option-radio-container {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    color: #000;
+    font-size: 16px;
 }
 
 .qa-panel pre {
@@ -760,12 +772,14 @@ a:hover, a:focus {
     display: none;
 }
 
-.img-url-result-img {
+#settings-page .img-url-result-img {
     border: 1px solid #000;
-    height: 80px;
-    width: 80px;
+    height: 90px;
+    width: 90px;
     float: left;
     margin-right: 10px;
+    padding: 2px;
+    background: #000;
 }
 
 .coming-soon-text {

@@ -15,6 +15,8 @@
 
 		.when("/settings", {
 			templateUrl: "modules/settings/settingsTemplate.html",
+			controller: "settingsController",
+			controllerAs: "vm",
 			data: {
 				pageID: "SETTINGS"
 			}
