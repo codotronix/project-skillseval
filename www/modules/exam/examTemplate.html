@@ -32,12 +32,25 @@
         <div class="qa-panel panel panel-default" data-ng-repeat="qa in vm.questions">
             <div class="panel-heading">
                 <div class="panel-title">
-                    <pre><b>{{"[Q " + ($index+1) + "] "}}</b>{{qa.q.trim()}}</pre>
+
+                    <pre data-ng-show="(qa.q.indexOf('\n') >= 0 || qa.q.indexOf('br>') >= 0)"><b>{{"[Q " + ($index+1) + "] "}}</b>{{qa.q.trim()}}</pre>
+
+                    <span data-ng-show="(qa.q.indexOf('\n') < 0 && qa.q.indexOf('br>') < 0)">
+                        <b>{{"[Q " + ($index+1) + "] "}}</b>{{qa.q.trim()}}
+                    </span>
                 </div>
             </div>
             <div class="panel-body options-container" data-ng-init="qa.chosenAns='Z'">
                 <div data-ng-repeat="op in qa.options">
-                    <pre><input type="radio" value="{{vm.optionIndices[$index]}}" data-ng-model="qa.chosenAns"> {{vm.optionIndices[$index] + ". " + op.trim()}}</pre>                
+
+                    <pre data-ng-show="(op.indexOf('\n') >= 0 || op.indexOf('br>') >= 0)"><input type="radio" value="{{vm.optionIndices[$index]}}" data-ng-model="qa.chosenAns"> {{vm.optionIndices[$index] + ". " + op.trim()}}</pre>
+
+
+                    <span data-ng-show="(op.indexOf('\n') < 0 && op.indexOf('br>') < 0)">
+                        <input type="radio" value="{{vm.optionIndices[$index]}}" data-ng-model="qa.chosenAns"> {{vm.optionIndices[$index] + ". " + op.trim()}}
+                    </span>
+
+
                 </div>
                 <div>
                     <pre><input type="radio" value="Z" data-ng-model="qa.chosenAns"> Z. I don't want to answer</pre> 
