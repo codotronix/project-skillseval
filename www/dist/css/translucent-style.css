@@ -1,0 +1,73 @@
+body.translucent {
+	background: url('../images/the-person-2887609_1280.jpg') 0 0 no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.translucent .header {
+	background: rgba(0,0,0,.7);
+}
+
+.translucent .icon-card .inner-container {
+	background: rgba(0, 0, 0, .6);
+}
+
+.translucent .lib-card:nth-child(11n+1) .inner-container {
+	background: rgba(243, 178, 0, 0.8);
+}
+
+.translucent .lib-card:nth-child(11n+2) .inner-container {
+	background: rgba(119, 185, 0, 0.8);
+}
+
+.translucent .lib-card:nth-child(11n+3) .inner-container {
+	background: rgba(37, 114, 235, 0.8);
+}
+
+.translucent .lib-card:nth-child(11n+4) .inner-container {
+	background: rgba(173, 16, 60, 0.8);
+}
+
+.translucent .lib-card:nth-child(11n+5) .inner-container {
+	background: rgba(99, 47, 0, 0.8);
+}
+
+.translucent .lib-card:nth-child(11n+6) .inner-container {
+	background: rgba(176, 30, 0, 0.8);
+}
+
+.translucent .lib-card:nth-child(11n+7) .inner-container {
+    background: rgba(193, 0, 79, 0.8);
+}
+
+.translucent .lib-card:nth-child(11n+8) .inner-container {
+    background: rgba(114, 0, 172, 0.8);
+}
+
+.translucent .lib-card:nth-child(11n+9) .inner-container {
+    background: rgba(70, 23, 180, 0.8);
+}
+
+.translucent .lib-card:nth-child(11n+10) .inner-container {
+    background: rgba(0, 106, 193, 0.8);
+}
+
+.translucent .heading {
+	background: rgba(84, 84, 203, 0.8);
+}
+
+.translucent #rules-dialog {
+	background: rgba(256, 256, 256, .9);
+}
+
+.translucent .left-menu-panel {
+	background: rgba(0,0,0,.7);
+}
+
+.translucent .panel-view-area {
+	background: rgba(255, 255, 255, .7);
+}
+
+.translucent .coming-soon-tag .coming-soon-text {
+	background: rgba(255, 255, 0, .7);
+}

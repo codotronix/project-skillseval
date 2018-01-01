@@ -66,10 +66,6 @@
 body {
     color: #6767E6;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    /*background: #f4a5f6;*/
-    background: url('../images/the-person-2887609_1280.jpg') 0 0 no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
 }
 
 body.exam-background {
@@ -195,8 +191,7 @@ a:hover, a:focus {
     top: 0;
     left: 0;
     right: 0;
-    background: #000;
-    background: rgba(0,0,0,.7);
+    background: #000;    
     z-index: 99999;
     padding: 5px;
     -webkit-transition: height .5s;
@@ -367,7 +362,7 @@ a:hover, a:focus {
     /*border: 1px solid #6767E6;*/
     border: 1px solid transparent;
     border-radius: 4px;
-    background: rgba(0, 0, 0, .6);
+    background: #000;
 }
 
 .icon-card .inner-container:hover {
@@ -446,53 +441,43 @@ a:hover, a:focus {
 }
 
 .lib-card:nth-child(11n+1) .inner-container {
-    background: #F3B200;
-    background: rgba(243, 178, 0, 0.8);
+    background: #F3B200;    
 }
 
 .lib-card:nth-child(11n+2) .inner-container {
-    background: #77B900;
-    background: rgba(119, 185, 0, 0.8);
+    background: #77B900;    
 }
 
 .lib-card:nth-child(11n+3) .inner-container {
-    background: #2572EB;
-    background: rgba(37, 114, 235, 0.8);
+    background: #2572EB;    
 }
 
 .lib-card:nth-child(11n+4) .inner-container {
-    background: #AD103C;
-    background: rgba(173, 16, 60, 0.8);
+    background: #AD103C;    
 }
 
 .lib-card:nth-child(11n+5) .inner-container {
-    background: #632F00;
-    background: rgba(99, 47, 0, 0.8);
+    background: #632F00;    
 }
 
 .lib-card:nth-child(11n+6) .inner-container {
-    background: #B01E00;
-    background: rgba(176, 30, 0, 0.8);
+    background: #B01E00;    
 }
 
 .lib-card:nth-child(11n+7) .inner-container {
     background: #C1004F;
-    background: rgba(193, 0, 79, 0.8);
 }
 
 .lib-card:nth-child(11n+8) .inner-container {
     background: #7200AC;
-    background: rgba(114, 0, 172, 0.8);
 }
 
 .lib-card:nth-child(11n+9) .inner-container {
     background: #4617B4;
-    background: rgba(70, 23, 180, 0.8);
 }
 
 .lib-card:nth-child(11n+10) .inner-container {
     background: #006AC1;
-    background: rgba(0, 106, 193, 0.8);
 }
 
 .lib-card .title {
@@ -574,8 +559,7 @@ a:hover, a:focus {
 }
 
 .heading {
-    background: #5454CB;
-    background: rgba(84, 84, 203, 0.8);
+    background: #5454CB;    
     color: #fff;
     padding: 10px 15px;
     font-size: 20px;
@@ -707,7 +691,7 @@ a:hover, a:focus {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(256, 256, 256, .9);
+    background: #fff;    
     z-index: 9999;
     padding: 100px 50px;
     overflow: auto;
@@ -749,7 +733,7 @@ a:hover, a:focus {
     bottom: 0;
     left: 0;
     width: 250px;
-    background: rgba(0,0,0,.7);
+    background: #000;    
     overflow: hidden;
 }
 
@@ -759,7 +743,7 @@ a:hover, a:focus {
     left: 250px;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, .7);
+    background: #fff;    
     padding: 30px 10px;
     color: #000;
 }
@@ -793,8 +777,7 @@ a:hover, a:focus {
     transform-origin: left;
     left: -10px;
     top: 65px;
-    background: yellow;
-    background: rgba(255, 255, 0, .7);
+    background: yellow;    
     color: #000;
     padding: 3px 20px;
 }
