@@ -17,7 +17,7 @@
                     First name
                 </label>
                 <div class="col-xs-12 col-sm-12 col-md-8 padding-left-20">
-                    <input type="text" placeholder="First name" class="form-control" />
+                    <input type="text" placeholder="First name" class="form-control"  data-ng-model="vm.user.firstName"/>
                 </div>
             </div>
 
@@ -26,7 +26,7 @@
                     Last name
                 </label>
                 <div class="col-xs-12 col-sm-12 col-md-8">
-                    <input type="text" placeholder="Last name" class="form-control" />
+                    <input type="text" placeholder="Last name" class="form-control"  data-ng-model="vm.user.lastName"/>
                 </div>
             </div>
 
@@ -48,7 +48,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12 margin-top-15">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="img-url-result-img">
-                        <img id="trial-img-profile" src="images/default-profile-white.png" class="img-responsive" />
+                        <img id="trial-img-profile" src="images/default-profile-white.png" data-ng-src="{{$root.profileImgUrl}}" class="img-responsive" />
                     </div>
                     <span>
                     Upload an image in Imgur / Google Drive / Dropbox / Blogger or anywhere you like. Copy the image url by right clicking on the image. Then paste it the Image URL box above.
@@ -56,7 +56,9 @@
                 </div>
             </div>
 
-            
+            <div class="col-xs-12 col-sm-12 col-md-12 margin-top-15">
+                <input type="button" class="btn btn-primary" value="Save" data-ng-click="vm.saveUserInfo()"/>
+            </div>
         </div>
 
 
