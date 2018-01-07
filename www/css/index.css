@@ -68,8 +68,8 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-body.exam-background {
-    background: none;
+body.blank-background {
+    background: none !important;
 }
 
 textarea {
@@ -89,6 +89,9 @@ a:hover, a:focus {
     margin-top: 15px;
 }
 
+.margin-top-50 {
+    margin-top: 50px;
+}
 
 .font-rye {
 	font-family: 'Rye', cursive;
@@ -780,4 +783,13 @@ a:hover, a:focus {
     background: yellow;    
     color: #000;
     padding: 3px 20px;
+}
+
+.auth-container {
+    height: 420px;
+    width: 400px;
+    background: rgba(0,0,0,.8);
+    padding: 50px 30px;
+    margin: 0 auto;
+    border-radius: 4px;
 }

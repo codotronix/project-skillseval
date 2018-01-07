@@ -30,6 +30,7 @@
         <link rel="manifest" href="/favicon/manifest.json">        
 
         <link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="lib/css/bootstrap-social.css">
         <link rel="stylesheet" type="text/css" href="lib/font-awesome-4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <link rel="stylesheet" type="text/css" href="css/translucent-style.css">
@@ -44,7 +45,7 @@
     data-ng-class="{
     'app': !!$root.isMobileApp, 
     'web': !$root.isMobileApp,
-    'exam-background': $root.pageID === 'EXAMENV'}">
+    'blank-background': ($root.pageID === 'EXAMENV')}">
 
         <div data-ng-include="'partials/loading.html'" class="no-print"></div>
         <div data-ng-include="'partials/header.html'" class="no-print"></div>
@@ -76,6 +77,7 @@
         <script type="text/javascript" src="modules/common/urlService.js"></script>
         <script type="text/javascript" src="modules/common/ajaxService.js"></script>
         <script type="text/javascript" src="modules/settings/settingsController.js"></script>
+        <script type="text/javascript" src="modules/auth/authController.js"></script>
         <script type="text/javascript" src="modules/exam/examService.js"></script>
         <script type="text/javascript" src="modules/exam/examController.js"></script>
         <script type="text/javascript" src="modules/exam/examResultController.js"></script>

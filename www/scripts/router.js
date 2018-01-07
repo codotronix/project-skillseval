@@ -4,6 +4,13 @@
 
 		$routeProvider
 
+		.when("/auth", {
+			templateUrl: "modules/auth/authTemplate.html",
+			data: {
+				pageID: "AUTH"
+			}
+		})
+
 		.when("/home", {
 			templateUrl: "modules/home/homeTemplate.html",
 			controller: "homeController",
@@ -75,7 +82,7 @@
 		})
 
 		.when("/", {
-			redirectTo: "/home"
+			redirectTo: "/auth"
 		})
 		.otherwise({
 			redirectTo: "/"
