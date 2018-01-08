@@ -6,13 +6,17 @@
     function authController ($location) {
         
         var vm = this;
-        vm.menuItems = undefined;
+        vm.continueAsGuest = continueAsGuest;
 
         init ();
 
 
         function init () {
             
+        }
+
+        function continueAsGuest () {
+        	$location.path('/home');
         }
     }
 })();
