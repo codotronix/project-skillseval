@@ -826,8 +826,7 @@ a:hover, a:focus {
 }
 
 .auth-container {
-    height: 420px;
-    width: 400px;
+    height: 420px;    
     background: rgba(0,0,0,.8);
     padding: 50px 30px;
     margin: 0 auto;

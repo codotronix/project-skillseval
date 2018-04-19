@@ -9,6 +9,14 @@
     }
 }
 
+@media (min-width: 500px) {
+
+    .auth-container {
+        width: 400px;
+        margin: 100px auto;
+    }
+}
+
 @media (max-width: 767px) {
     
     .header {

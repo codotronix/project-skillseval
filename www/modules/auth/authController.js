@@ -6,7 +6,7 @@
     function authController ($location, modalService) {
         
         var vm = this;
-        vm.menuItems = undefined;
+        vm.continueAsGuest = continueAsGuest;
 
         init ();
 
@@ -49,6 +49,10 @@
             // The start method will wait until the DOM is loaded.
             modalService.showLoader();
             ui.start('#firebaseui-auth-container', uiConfig);
+        }
+
+        function continueAsGuest () {
+        	$location.path('/home');
         }
     }
 })();
