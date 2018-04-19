@@ -774,8 +774,8 @@ a:hover, a:focus {
 }
 
 .left-menu-panel .inner-container .menu li.selected {
-    border-right: 7px solid #fff;
-    border-left: 7px solid #fff;
+    border-right: 7px solid #ff0;
+    border-left: 7px solid #ff0;
 }
 
 

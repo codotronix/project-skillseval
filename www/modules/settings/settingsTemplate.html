@@ -10,10 +10,10 @@
         <div class="inner-container">
             <h2 class="heading">Menu</h2>
             <ul class="menu">
-                <li data-ng-class="{'selected': (vm.chosenMenu === 'profile')}">Profile</li>
-                <li data-ng-class="{'selected': (vm.chosenMenu === 'privacypolicy')}">Privacy Policy</li>
-                <li data-ng-class="{'selected': (vm.chosenMenu === 'about')}">About</li>
-                <li data-ng-class="{'selected': (vm.chosenMenu === 'share')}">Share</li>
+                <li data-ng-class="{'selected': (vm.chosenMenu === 'profile')}" data-ng-click="vm.chosenMenu = 'profile'">Profile</li>
+                <li data-ng-class="{'selected': (vm.chosenMenu === 'privacypolicy')}" data-ng-click="vm.chosenMenu = 'privacypolicy'">Privacy Policy</li>
+                <li data-ng-class="{'selected': (vm.chosenMenu === 'about')}" data-ng-click="vm.chosenMenu = 'about'">About</li>
+                <li data-ng-class="{'selected': (vm.chosenMenu === 'share')}" data-ng-click="vm.chosenMenu = 'share'">Share</li>
             </ul>
         </div>        
     </div>
@@ -22,7 +22,9 @@
 
     <!-- Middle Region -->
     <div class="panel-view-area">
-        <div class="user-profile-settings">
+        
+        <!-- Profile Section Starts -->
+        <div class="user-profile-settings" data-ng-show="vm.chosenMenu === 'profile'">
             <div class="col-xs-12 col-sm-6 col-md-6 margin-top-15">
                 <label class="col-xs-12 col-sm-12 col-md-4">
                     First name
@@ -71,6 +73,25 @@
                 <input type="button" class="btn btn-primary" value="Save" data-ng-click="vm.saveUserInfo()"/>
             </div>
         </div>
+        <!-- Profile Section Ends -->
+
+        <!-- privacypolicy Section Starts -->
+        <div data-ng-show="vm.chosenMenu === 'privacypolicy'"> 
+            TODO: Privacy Policy           
+        </div>
+        <!-- privacypolicy Section Ends -->
+
+        <!-- about Section Starts -->
+        <div data-ng-show="vm.chosenMenu === 'about'"> 
+            TODO: About the App          
+        </div>
+        <!-- about Section Ends -->
+
+        <!-- share Section Starts -->
+        <div data-ng-show="vm.chosenMenu === 'share'"> 
+            TODO: Share App        
+        </div>
+        <!-- share Section Ends -->
 
 
 
