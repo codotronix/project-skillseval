@@ -6,6 +6,8 @@
 
 		.when("/auth", {
 			templateUrl: "modules/auth/authTemplate.html",
+			controller: "authController",
+			controllerAs: "vm",
 			data: {
 				pageID: "AUTH"
 			}
@@ -82,7 +84,7 @@
 		})
 
 		.when("/", {
-			redirectTo: "/auth"
+			redirectTo: "/home"
 		})
 		.otherwise({
 			redirectTo: "/"

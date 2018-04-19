@@ -8,6 +8,8 @@
         vm.user = undefined;
         vm.saveUserInfo = saveUserInfo;
         vm.updateImg = updateImg;
+        vm.isLeftPanelCollapsed = (window.innerWidth < 768) ? true : false;
+        vm.chosenMenu = "profile";
 
         init();
 

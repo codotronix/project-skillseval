@@ -4,7 +4,7 @@
     <div class="heading">Select a subject</div>
 
     <div class="">
-    	<div data-ng-repeat="item in vm.library.list" class="lib-card col-xs-12 col-sm-4 col-md-3">
+    	<div data-ng-repeat="item in vm.library.list" class="lib-card coloured-card col-xs-12 col-sm-4 col-md-3">
     		<div class="inner-container" 
             data-ng-click="vm.goTo(item)"
             data-ng-class="{'coming-soon-tag': item.notImplemented}">

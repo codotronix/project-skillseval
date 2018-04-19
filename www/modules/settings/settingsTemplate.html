@@ -1,16 +1,27 @@
 <div id="settings-page">
     
     <!-- Left Panel -->
-    <div class="left-menu-panel">
-        Menu
+    <div class="left-menu-panel" 
+    data-ng-class="{'open': !vm.isLeftPanelCollapsed}">
+
+        <i class="fa fa-bars show-hide-left-menu" 
+        data-ng-click="vm.isLeftPanelCollapsed = !vm.isLeftPanelCollapsed"></i>
+
+        <div class="inner-container">
+            <h2 class="heading">Menu</h2>
+            <ul class="menu">
+                <li data-ng-class="{'selected': (vm.chosenMenu === 'profile')}">Profile</li>
+                <li data-ng-class="{'selected': (vm.chosenMenu === 'privacypolicy')}">Privacy Policy</li>
+                <li data-ng-class="{'selected': (vm.chosenMenu === 'about')}">About</li>
+                <li data-ng-class="{'selected': (vm.chosenMenu === 'share')}">Share</li>
+            </ul>
+        </div>        
     </div>
     <!-- ***** END OF Left Panel ***** -->
 
 
     <!-- Middle Region -->
     <div class="panel-view-area">
-        <i class="fa fa-bars show-hide-left-menu"></i>
-
         <div class="user-profile-settings">
             <div class="col-xs-12 col-sm-6 col-md-6 margin-top-15">
                 <label class="col-xs-12 col-sm-12 col-md-4">
