@@ -1,0 +1,18 @@
+<div data-ng-repeat="menu in vm.menuItems" class="lib-card coloured-card col-xs-12 col-sm-6 col-md-3 icon-card">
+    <a class="inner-container" href="{{menu.url}}" data-ng-class="{'coming-soon-tag': menu.notImplemented}">
+        <span class="coming-soon-text">Coming Soon</span>
+        <div class="icon-container">
+            <span class="icon {{menu.icon}}"></span>
+        </div>
+        <div class="title font-rye">
+            <span>{{menu.name}}</span>
+        </div>
+        <div class="desc">
+            <ol>
+                <li data-ng-repeat="d in menu.desc">
+                    {{d}}
+                </li>
+            </ol>
+        </div>
+    </a>
+</div>

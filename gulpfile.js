@@ -1,4 +1,5 @@
-var gulp  = require('gulp'),
+const fs = require('fs'),
+    gulp  = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     gulpRemoveHtml = require('gulp-remove-html'),
@@ -7,14 +8,27 @@ var gulp  = require('gulp'),
     javascriptObfuscator = require('gulp-javascript-obfuscator'),
     templateCache = require('gulp-angular-templatecache');
 
+
 //Now requiring custom modules
-var dataProcessor = require('./tools/node-tools/data-processor/process');
+const dataProcessor = require('./tools/node-tools/data-processor/process'),
+    keyMaker = require('./tools/node-tools/data-processor/keymaker');
  
+
+gulp.task('testTools', function(){
+    keyMaker.test();
+});
+
 /*
 * Encrypt all data files from devData and put them in data folder
 */
 gulp.task('devDataToDataProcess', function () {
     dataProcessor.start();
+});
+
+gulp.task('checkPropertiesFiles', function() {
+    console.log("In checkPropertiesFiles...");
+    var data = fs.readFileSync('www/scripts/properties.js', "utf8");
+    console.log(data);
 });
 
 //Process script files
@@ -27,7 +41,7 @@ gulp.task('concatScripts', function() {
         'www/modules/**/*Controller.js',
         'www/scripts/router.js'
     ])
-    .pipe(concat('nexaa.js'))
+    .pipe(concat('knexaa.js'))
     .pipe(uglify())
     .pipe(javascriptObfuscator())
     .pipe(gulp.dest('www/dist/js/'));
@@ -47,10 +61,10 @@ gulp.task('createTemplateCache', function () {
 //Delete development scripts from index.html
 gulp.task('removeDevScripts', function () {
     var minJS = `
-        <script type="text/javascript" src="dist/js/nexaa.js"></script>
+        <script type="text/javascript" src="dist/js/knexaa.js"></script>
         <script type="text/javascript" src="dist/js/templates.js"></script>
 
-        <script type="text/javascript" src="js/nexaa.js"></script>
+        <script type="text/javascript" src="js/knexaa.js"></script>
         <script type="text/javascript" src="js/templates.js"></script>
     `;
 

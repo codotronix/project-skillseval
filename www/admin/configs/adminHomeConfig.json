@@ -1,0 +1,47 @@
+{
+    "menuItems": [
+        {
+            "name": "Ans Key",
+            "icon": "fa fa-key",
+            "url": "#!/learn",
+            "notImplemented": true,
+            "desc": [
+                "Create keys for answers",
+                "Decode answers from keys",
+                "Bulk create keys for QA array"
+            ]
+        },
+        {
+            "name": "Exam",
+            "icon": "fa fa-pencil-square-o",
+            "url": "#!/library/index",
+            "desc": [
+                "Create keys for answers",
+                "Decode answers from keys",
+                "Bulk create keys for QA array"
+            ]
+        },
+        {
+            "name": "MemCards",
+            "icon": "fa fa-clone",
+            "url": "#!/learn",
+            "notImplemented": true,
+            "desc": [
+                "Create keys for answers",
+                "Decode answers from keys",
+                "Bulk create keys for QA array"
+            ]
+        },
+        {
+            "name": "Dashboard",
+            "icon": "fa fa-line-chart",
+            "url": "#!/learn",
+            "notImplemented": true,
+            "desc": [
+                "Create keys for answers",
+                "Decode answers from keys",
+                "Bulk create keys for QA array"
+            ]
+        }
+    ]
+}
