@@ -45,6 +45,10 @@
 
             //console.log(e);
 
+            if($(window).width() <= 600) {
+                return;
+            }
+
             //going up
             if ($(window).scrollTop() < 70) {
                 $('body').removeClass('scrollingDown');

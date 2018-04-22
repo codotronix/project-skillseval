@@ -5,7 +5,8 @@ body.translucent {
 }
 
 .translucent .header {
-	background: rgba(0,0,0,.7);
+	background: #000;
+    background: linear-gradient(to right, #000, #000, #4b00ff,#000,  #000);    
 }
 
 .translucent .icon-card .inner-container {
@@ -18,7 +19,7 @@ body.translucent {
 }
 
 .translucent .coloured-card:nth-child(11n+1) .inner-container {
-	background: rgba(243, 178, 0, 0.8);
+	background: rgba(110, 142, 14, 0.8);
 }
 
 .translucent .coloured-card:nth-child(11n+2) .inner-container {
@@ -54,7 +55,7 @@ body.translucent {
 }
 
 .translucent .coloured-card:nth-child(11n+10) .inner-container {
-    background: rgba(0, 106, 193, 0.8);
+    background: rgba(255, 179, 0, 0.8);
 }
 
 .translucent .heading {

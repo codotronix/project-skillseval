@@ -7,6 +7,26 @@
     body {
         background-position: -385px 0;
     }
+
+    .thick-header {
+        display: none;
+    }
+
+    .thin-header {
+        display: block;
+        height: 69px;
+    }
+
+    .thin-header .small-logo {
+        display: inline-block;
+        height: 45px;
+        width: 45px;
+    }
+
+    .main-container {
+        margin-top: 80px;
+    }
+
 }
 
 @media (min-width: 500px) {
@@ -20,7 +40,7 @@
 @media (max-width: 767px) {
     
     .header {
-        text-align: center;
+        /*text-align: center;*/
     }
 
     .header .share-btn {

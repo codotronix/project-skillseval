@@ -166,31 +166,19 @@ a:hover, a:focus {
 
 .loading-modal {
     display: block;
-    background: #6767E6;
+    background: rgba(0, 0, 0, .8);
     z-index: 999999;
-    text-align: center;
-    padding-top: 250px; 
+    text-align: center; 
 }
 
-.loading-modal .loading {
+.loading-modal .loading-img {
     position: relative;
-    display: inline-block;
-    height: 800px;
-    width: 80px;
-}
-
-.loading-modal .loading .loading-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.loading-modal .loading .loading-icon {
-    position: absolute;
-    top: -15px;
-    left: -29px;
-    font-size: 100px;
-    color: #FFF;
+    width: 100px;
+    height: auto;
+    margin-top: 150px;
+    margin-top: 40vh;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .header {
@@ -198,7 +186,7 @@ a:hover, a:focus {
     top: 0;
     left: 0;
     right: 0;
-    background: #000;    
+    background: #000;   
     z-index: 99999;
     padding: 5px;
     -webkit-transition: height .5s;
@@ -264,7 +252,7 @@ a:hover, a:focus {
 .header img {
     position: relative;
     height: 100px;
-    margin-top: 5px;
+    margin-top: 2.5px;
     /*margin-left: 20px;*/
 }
 
