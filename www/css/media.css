@@ -4,7 +4,8 @@
 ***************************************************************/
 @media (max-width: 600px) {
 
-    body {
+    body,
+    body.translucent {
         background-position: -385px 0;
     }
 
@@ -19,8 +20,8 @@
 
     .thin-header .small-logo {
         display: inline-block;
-        height: 45px;
-        width: 45px;
+        height: 59px;
+        width: auto;
     }
 
     .main-container {

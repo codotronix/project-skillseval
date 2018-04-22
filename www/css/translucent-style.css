@@ -1,7 +1,15 @@
 body.translucent {
-	background: url('../images/the-person-2887609_1280.jpg') 0 0 no-repeat;
+	background: url('../images/the-person-2887609_1280.jpg') 0 0 repeat;
     background-attachment: fixed;
     background-size: cover;
+}
+
+body.translucent .panel {
+    background: transparent;
+}
+
+body.translucent .panel .panel-body {
+    background: #fff;
 }
 
 .translucent .header {
