@@ -168,23 +168,6 @@ a:hover, a:focus {
     border: none !important;
 }
 
-.loading-modal {
-    display: block;
-    background: rgba(0, 0, 0, .8);
-    z-index: 999999;
-    text-align: center; 
-}
-
-.loading-modal .loading-img {
-    position: relative;
-    width: 100px;
-    height: auto;
-    margin-top: 150px;
-    margin-top: 40vh;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .header {
     position: fixed;
     top: 0;

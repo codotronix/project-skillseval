@@ -14,6 +14,26 @@
         <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
 
+        <!-- LOAD THE LOADER STYLES FASTEST -->
+        <style>
+            .modal.loading-modal {
+                display: block;
+                background: #000;
+                z-index: 999999;
+                text-align: center; 
+            }
+
+            .loading-modal .loading-img {
+                position: relative;
+                width: 100px;
+                height: auto;
+                margin-top: 150px;
+                margin-top: 40vh;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
+
         <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
         <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
@@ -49,7 +69,12 @@
 
         <!-- <div id="firebaseui-auth-container"></div> -->
 
-        <div data-ng-include="'partials/loading.html'" class="no-print"></div>
+        <!-- <div data-ng-include="'partials/loading.html'" class="no-print"></div> -->
+
+        <div class="modal loading-modal" data-ng-show="mvm.isLoaderVisible()">
+            <img class="loading-img" src="images/knexaa-loader-200x231.gif"/>
+        </div>
+
         <div data-ng-include="'partials/header.html'" class="no-print"></div>
         <div class="container-fluid main-container">            
             <div data-ng-view=""></div>

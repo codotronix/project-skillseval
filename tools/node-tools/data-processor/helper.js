@@ -43,3 +43,19 @@ function breakIntoFives (s, sep) {
 function replaceAt(s, i, c) {
     return s.substr(0, i) + c + s.substr(i + c.toString().length);
 }
+
+
+/*
+ * This function will randomize the members of a given array
+*/
+function randomizeArray (arr) {
+    var arr = arr.slice();  //make a copy of the original array
+    var res = [];
+    var ind;
+    while (arr.length > 0) {
+        ind = Math.floor(Math.random() * arr.length);
+        res.push(arr[ind]);
+        arr.splice(ind, 1);
+    }
+    return res;
+}
