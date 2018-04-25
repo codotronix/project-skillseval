@@ -23,14 +23,10 @@
                 text-align: center; 
             }
 
-            .loading-modal .loading-img {
-                position: relative;
-                /*width: 60px;
-                height: auto;*/
+            .loading-img-container {
+                text-align: center;
                 margin-top: 150px;
                 margin-top: 40vh;
-                margin-left: auto;
-                margin-right: auto;
             }
         </style>
 
@@ -72,7 +68,11 @@
         <!-- <div data-ng-include="'partials/loading.html'" class="no-print"></div> -->
 
         <div class="modal loading-modal" data-ng-show="mvm.isLoaderVisible()">
-            <img class="loading-img" src="images/knexaa-loader-60x69.gif"/>
+            <div class="loading-img-container">
+                <img src="images/knexaa-min-75x78.png" alt="Loading...">
+                <br/>
+                <img src="images/knexaa-loader-bar-80x11.gif" alt="Please wait...">
+            </div>
         </div>
 
         <div data-ng-include="'partials/header.html'" class="no-print"></div>
