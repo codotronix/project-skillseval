@@ -16,7 +16,7 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
         'www/lib/js/angular.min.js',
-        'www/lib/js/angular-route..min.js',
+        'www/lib/js/angular-route.min.js',
         'www/lib/js/angular-mocks.js',
         'www/lib/js/*.js',
         'www/scripts/*.js',
@@ -33,13 +33,14 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+        '**/modules/**/*.js': 'coverage'
     },
 
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['progress', 'coverage'],
 
 
     // web server port

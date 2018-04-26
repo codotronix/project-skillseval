@@ -1,10 +1,10 @@
 (function(){
     angular.module("skillseval").factory("secretService", secretService);
     
-    secretService.$inject = [];
+    secretService.$inject = ['$window'];
 
-    function secretService () {
-        angular.CryptoJS = CryptoJS;
+    function secretService ($window) {
+        angular.CryptoJS = $window.CryptoJS;
         CryptoJS = undefined;
         delete window.CryptoJS;
         delete window.crypto;
@@ -56,5 +56,6 @@
             return ans;
         }
         
+
     }
 })();

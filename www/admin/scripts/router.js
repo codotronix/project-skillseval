@@ -13,6 +13,15 @@
 			}
 		})
 
+		.when("/key", {
+			templateUrl: "admin/modules/key/keyTemplate.html",
+			controller: "keyController",
+			controllerAs: "vm",
+			data: {
+				pageID: "KEY"
+			}
+		})
+
 		.when("/", {
 			redirectTo: "/home"
 		})
