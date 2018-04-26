@@ -20,6 +20,8 @@ module.exports = function(config) {
         'www/lib/js/angular-mocks.js',
         'www/lib/js/*.js',
         'www/scripts/*.js',
+        'www/modules/common/helperService.js',
+        'www/modules/common/keymakerService.js',
         'www/modules/**/*.js',
         'www/unit-tests/*.js'
     ],
