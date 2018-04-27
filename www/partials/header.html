@@ -6,6 +6,12 @@
         </a>
 	</label> -->
 <div data-ng-if="$root.pageID !== 'EXAMENV' && $root.pageID !== 'AUTH'">
+
+    <!-- The WIP Banner -->
+    <div class="dev-in-progress-msg" data-ng-if="mvm.devInProgressMsg">
+        <div class="msg" data-ng-bind-html="mvm.devInProgressMsg"></div>
+    </div>
+
     <!-- The Thin version of the header -->
     <div class="header thin-header">
         <a href="#!/home" class="anchor-no-decoration">
@@ -37,6 +43,9 @@
             </a>
         </div> -->
     </div>
+
+
+
 <div>
 
 
