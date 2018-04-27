@@ -10,6 +10,11 @@ describe('Knexaa helper service', function() {
     }));
 
 
+    it('should test getRandomAlphas - returns constant string forever', function() {
+        expect(helper.getRandomAlphas()).toBe("GBUYEWIZNXADTHVPQFCSLRMOKJ");
+    });
+
+
     it('should test getAlphaNumString', function() {
         expect(helper.getAlphaNumString(5).length).toBe(5);
         expect(helper.getAlphaNumString(9).length).toBe(9);

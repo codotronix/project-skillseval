@@ -3,14 +3,33 @@
     helper.$inject = [];
 
     function helper () {
+
+        //constant randomAlphas helps us know value of each ALPHABET
         var randomAlphas = "GBUYEWIZNXADTHVPQFCSLRMOKJ";
 
         return {
+            getRandomAlphas: getRandomAlphas,
             getAlphaNumString: getAlphaNumString,
             replaceStringAt: replaceStringAt,
             breakIntoFives: breakIntoFives,
             randomizeArray: randomizeArray,
-            alphaToNum: alphaToNum
+            alphaToNum: alphaToNum,
+            numToAlpha: numToAlpha
+        }
+
+        /*
+        * This function returns constant randomAlphas
+        */
+        function getRandomAlphas () {
+            return randomAlphas;
+        }
+
+        /*
+        * It takes a number between 0 to 25
+        * and returns an ALPHABET corresponding to it 
+        */
+        function numToAlpha (num) {
+            return randomAlphas[num];
         }
 
         /*
@@ -51,7 +70,9 @@
          * index with character c or string c
         */
         function replaceStringAt(s, i, c) {
-            return s.substr(0, i) + c + s.substr(i + c.toString().length);
+            i = parseInt(i);
+            c = c.toString();
+            return s.substr(0, i) + c + s.substr(i + c.length);
         }
 
 
