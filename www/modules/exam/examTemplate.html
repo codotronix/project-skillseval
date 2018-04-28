@@ -50,17 +50,29 @@
 
                 <div data-ng-repeat="op in qa.options">
 
-                    <pre data-ng-show="(op.indexOf('\n') >= 0 || op.indexOf('br>') >= 0)"><input type="radio" value="{{vm.optionIndices[$index]}}" data-ng-model="qa.chosenAns"> {{vm.optionIndices[$index] + ". " + op.trim()}}</pre>
+                    <!-- IF CODE, RENDER INSIDE PRE-->
+                    <label data-ng-show="(op.indexOf('\n') >= 0 || op.indexOf('br>') >= 0)" class="option-radio-container flat-bottom checkcontainer">
+                        {{vm.optionIndices[$index] + ". "}}
+                        <input type="radio" value="{{vm.optionIndices[$index]}}" data-ng-model="qa.chosenAns">                        
+                        <span class="checkmark"></span>
+                    </label>
+                    <pre data-ng-show="(op.indexOf('\n') >= 0 || op.indexOf('br>') >= 0)">{{op.trim()}}</pre>
 
-
-                    <span data-ng-show="(op.indexOf('\n') < 0 && op.indexOf('br>') < 0)" class="option-radio-container">
-                        <input type="radio" value="{{vm.optionIndices[$index]}}" data-ng-model="qa.chosenAns"> {{vm.optionIndices[$index] + ". " + op.trim()}}
-                    </span>
+                    <!-- IF NORMAL TEXT, LABEL SHOULD BE FINE-->
+                    <label data-ng-show="(op.indexOf('\n') < 0 && op.indexOf('br>') < 0)" class="option-radio-container checkcontainer">
+                        {{vm.optionIndices[$index] + ". " + op.trim()}}
+                        <input type="radio" value="{{vm.optionIndices[$index]}}" data-ng-model="qa.chosenAns">
+                        <span class="radiobtn"></span>
+                    </label>
 
 
                 </div>
                 <div>
-                    <pre><input type="radio" value="Z" data-ng-model="qa.chosenAns"> Z. I don't want to answer</pre> 
+                    <label class="option-radio-container checkcontainer">
+                        Z. I don't want to answer
+                        <input type="radio" value="Z" data-ng-model="qa.chosenAns"> 
+                        <span class="radiobtn"></span>
+                    </label> 
                 </div>
             </div>
             <!-- SingleAnsMCQ Options ENDS Here-->
@@ -72,12 +84,20 @@
             data-ng-init="qa.chosenAns={}; qa.type='B';">
                 <div data-ng-repeat="op in qa.options">
 
-                    <pre data-ng-show="(op.indexOf('\n') >= 0 || op.indexOf('br>') >= 0)"><input type="checkbox" value="{{vm.optionIndices[$index]}}" data-ng-model="qa.chosenAns[vm.optionIndices[$index]]"> {{vm.optionIndices[$index] + ". " + op.trim()}}</pre>
+                    <!-- IF CODE, RENDER INSIDE PRE-->
+                    <label data-ng-show="(op.indexOf('\n') >= 0 || op.indexOf('br>') >= 0)" class="option-radio-container checkcontainer">
+                        {{vm.optionIndices[$index] + ". "}}
+                        <input type="checkbox" value="{{vm.optionIndices[$index]}}" data-ng-model="qa.chosenAns[vm.optionIndices[$index]]">
+                        <span class="checkmark"></span>
+                    </label>
+                    <pre data-ng-show="(op.indexOf('\n') >= 0 || op.indexOf('br>') >= 0)">{{op.trim()}}</pre>
 
-
-                    <span data-ng-show="(op.indexOf('\n') < 0 && op.indexOf('br>') < 0)" class="option-radio-container">
-                        <input type="checkbox" value="{{vm.optionIndices[$index]}}" data-ng-model="qa.chosenAns[vm.optionIndices[$index]]"> {{vm.optionIndices[$index] + ". " + op.trim()}}
-                    </span>
+                    <!-- IF NORMAL TEXT, LABEL SHOULD BE FINE-->
+                    <label data-ng-show="(op.indexOf('\n') < 0 && op.indexOf('br>') < 0)" class="option-radio-container checkcontainer">
+                        {{vm.optionIndices[$index] + ". " + op.trim()}}
+                        <input type="checkbox" value="{{vm.optionIndices[$index]}}" data-ng-model="qa.chosenAns[vm.optionIndices[$index]]">
+                        <span class="checkmark"></span>
+                    </label>
                 </div>
             </div>
             <!-- MultiAnsMCQ Options ENDS Here-->
