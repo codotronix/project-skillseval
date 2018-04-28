@@ -834,3 +834,26 @@ a:hover, a:focus {
     margin: 0 auto;
     border-radius: 4px;
 }
+
+.dev-in-progress-msg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999999;
+    text-align: center;
+}
+
+.dev-in-progress-msg .msg {
+    background: #ffffff40;
+    display: inline-block;
+    color: #fffb00 !important;
+    padding: 5px 7px;
+    border-radius: 4px;
+    width: 293px;
+    font-size: 15px;
+}
+
+.dev-in-progress-msg .msg a {
+    color: #fffb00 !important;
+}

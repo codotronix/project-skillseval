@@ -28,6 +28,18 @@
         margin-top: 80px;
     }
 
+    .dev-in-progress-msg {
+        top: 315px;
+        right: -118px;
+        left: auto;
+        transform: rotate(90deg);
+        transform-origin: center;
+    }
+
+    .dev-in-progress-msg .msg {
+        background: rgba(0, 0, 0, .5);
+    }
+
 }
 
 @media (min-width: 500px) {
