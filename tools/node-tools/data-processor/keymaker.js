@@ -1,185 +1,258 @@
 const helper = require('./helper');
 
-module.exports = {
-    makeKey: makeKey,
-    decodeKey: decodeKey,
-    test: test
-};
-
-/*
- * This function creates "key" from "ans" 
- * 
- * "ans" can be
- * => array --- for Multiple Ans MCQ --- ['B', 'D']
- * => sinle char --- for Single Ans MCQ --- 'C'
-*/
-function makeKey (ans) {
-    var key;
-    //Check if ans is an Array of Options i.e. Multi-Ans-MCQ
-    if (Array.isArray(ans)) {
-        key = makeKeyForMultiAnsMCQ(ans);
-    }
-
-    return key;
-}
-
-/*
-* This function decodes key and returns ans, either Character or Array of Characters
-*/
-var singleAnsMCQCodes = ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9'];
-var multiAnsMCQCodes = ['B1', 'B2', 'B3', 'B4', 'B5'];
-function decodeKey (key) {
-    var ans;
-    var formulaID = key.split('-')[0];
-
-    if (singleAnsMCQCodes.indexOf(formulaID) > -1) {
-
-    }
-    else if (multiAnsMCQCodes.indexOf(formulaID) > -1) {
-        ans = decodeKeyForMultiAnsMCQ(key);
-    }
-
-    return ans;
-}
+module.exports = keymaker (helper);
 
 
-/*
- * This function makes key from an ansArray e.g. ['B', 'D']
- * The Flavours is a look up for all possible flavous for this technique
- * Read design doc for the formula
- * 
-*/
-var multiMcqFlavours = [
-    {
-        code: 'B1',
-        fixedIndex: 4,
-    },
-    {
-        code: 'B2',
-        fixedIndex: 3,
-    },
-    {
-        code: 'B3',
-        fixedIndex: 1,
-    },
-    {
-        code: 'B4',
-        fixedIndex: 0,
-    },
-    {
-        code: 'B5',
-        fixedIndex: 2,
-    },
-];
+function keymaker (helper) {
+        var availableIndices20 = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19];
+        var singleMCQCodes = {
+            codeInitial: 'A',
+            codeRefs: [[15,9,2],[10,14,15,3],[1,2,19,14],[1,8,0],[9,7,4,19,2],[5,17,11,8,14],[11,17,8,16],[9,11,19],[12,15,6],[12,3,11,15]]
+        };
 
-function makeKeyForMultiAnsMCQ (ansArray) {
-
-    // get an AlphaNumeric String of Length 20
-    var alphaNum20 = helper.getAlphaNumString(20);
-
-    //choose ansArray.length numbers of random indexes inside alphaNum20
-    //where we will hide the answers
-    var availableSlots = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19];
-    var chosenSlots = [];
-    for(var i=0; i<ansArray.length; i++) {
-        var randomIndex = Math.floor(Math.random()*availableSlots.length);
-        var slot = availableSlots[randomIndex];
-
-        //put this answer in this slot
-        //alphaNum20[slot] = ansArray[i]
-        alphaNum20 = helper.replaceAt(alphaNum20, slot, ansArray[i]);
-
-        //save the slot number
-        chosenSlots.push(slot);
-
-        //make that slot unavailable
-        availableSlots.splice(randomIndex, 1);
-    }
-
-    //At this point our answers are saved in alphaNum20
-    //at the index locations saved in array chosenSlots
-    console.log("chosenSlots = " + JSON.stringify(chosenSlots));
-
-    //Now let's get another alphaNum string of length 5
-    //we will store Number of Correct Answers to choose, i.e. ansArray.length here
-    var alphaNum5 = helper.getAlphaNumString(5);
-    console.log(alphaNum5);
-    var randomFlavour = multiMcqFlavours[Math.floor(Math.random()*multiMcqFlavours.length)];
-    //alphaNum5[randomFlavour.fixedIndex] = ansArray.length;
-    alphaNum5 = helper.replaceAt(alphaNum5, randomFlavour.fixedIndex, ansArray.length);
-
-    console.log(JSON.stringify(randomFlavour));
-    console.log('|' + alphaNum5 + '|');
-    
-    //Now take Another 15 length AlphaNum String and hide the chosen slots
-    var alphaNum15 = helper.getAlphaNumString(15);
-    var shift = (ansArray.length <= 4) ? 1 : 0;
-    var gap = Math.floor(15 / ansArray.length);
-    for (var i=0; i<chosenSlots.length; i++) {
-        //alphaNum15[i + shift] = chosenSlots[i];
-        var ind = i*gap + shift;
-        alphaNum15 = helper.replaceAt(alphaNum15, ind, chosenSlots[i]);
-        shift *= -1;
-    }
-
-    return randomFlavour.code + '-' + helper.breakIntoFives(alphaNum5 + alphaNum15 + alphaNum20);
-}
-
-
-
-/*
- * This function decodes a key and returns Array of Character as Answers
-*/
-function decodeKeyForMultiAnsMCQ (key) {
-    var parts = key.split('-');
-
-    var formulaID = parts[0];
-    var alphaNum1 = parts[1];
-    var alphaNum15 = parts[2] + parts[3] + parts[4];
-    var alphaNum20 = parts[5] + parts[6] + parts[7] + parts[8];
-
-    var fixedIndex;
-    for(var i in multiMcqFlavours) {
-        if(multiMcqFlavours[i].code === formulaID) {
-            fixedIndex = multiMcqFlavours[i].fixedIndex;
+        return {
+            makeKey: makeKey,
+            decodeKey: decodeKey,
+            makeKeyForSingleAnsMCQ: makeKeyForSingleAnsMCQ,
+            decodeKeyForSingleAnsMCQ: decodeKeyForSingleAnsMCQ,
+            makeKeyForMultiAnsMCQ: makeKeyForMultiAnsMCQ,
+            decodeKeyForMultiAnsMCQ: decodeKeyForMultiAnsMCQ
         }
+
+
+        /*
+         * This function creates "key" from "ans" 
+         * 
+         * "ans" can be
+         * => array --- for Multiple Ans MCQ --- ['B', 'D']
+         * => sinle char --- for Single Ans MCQ --- 'C'
+        */
+        function makeKey (ans) {
+            var key;
+
+            //Check if ans is an "Array of Options" i.e. Multi-Ans-MCQ
+            if (Array.isArray(ans)) {
+                key = makeKeyForMultiAnsMCQ(ans);
+            }
+
+            //If not array, then is it a character?
+            else if (ans.length === 1) {
+                key = makeKeyForSingleAnsMCQ(ans);
+            }
+
+            return key;
+        }
+
+
+        /*
+        * This function decodes a key and returns the answer
+        */
+        function decodeKey (key) {
+            var ans;
+
+            //If it starts with A, then it is a SingleAnsMCQ
+            if(key[0] === 'A') {
+                ans = decodeKeyForSingleAnsMCQ(key);
+            }
+
+            //if starts with 'B', then it is a Multi-Ans-MCQ
+            else if (key[0] === 'B') {
+                ans = decodeKeyForMultiAnsMCQ(key);
+            }
+
+            return ans;
+        }
+
+
+        /*
+        * This function takes a single character, i.e. the correct option
+        * of a single-ans-MCQ, like 'A' or 'B' or 'C' etc
+        * and converts it to a key
+        * 
+        * The key will be of structure
+        * CC-XXXXX-XXXXX-XXXXX-XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+        *
+        * CC = The code
+        * x = alphanumeric character [A-Z and 0-9]
+        *
+        * ALGORITHM
+        *
+        * 1. CREATE A STRUCTURE LIKE
+        * 2. CC - X(20) - X(20)
+        * 3. CC code will tell some index of 1st X(20)
+        * 4. Read the values from those indexes and add them,
+        *       converting each alphas into a predefined numbers
+        * 5. the sum will point to the index of 2nd X(20) where Ans is located
+
+        *******
+        * Code snippet to generate n random array of m length arrays
+        function createNArraysOfMArray () {
+            var res=[], n=10;
+            for(var k=0; k<n; k++) {
+                var m = Math.floor(Math.random()*4 + 3);
+                var b = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19];
+                var r = [], ind;
+                for(var i=0; i<m; i++) {
+                    ind = Math.floor(Math.random()*b.length);
+                    r.push(b[ind]);
+                    b.splice(ind, 1);
+                }
+
+                res.push(r);
+            }
+            return res;
+        }
+        */
+        
+        //ans will be a single Char
+        //code will be something like A0, A1... A9
+        function makeKeyForSingleAnsMCQ (ans, code) {
+            var codeRefIndex;
+            if (code) {
+                codeRefIndex = parseInt(code.substr(1))
+            }
+            else {
+                codeRefIndex = Math.floor(Math.random()*singleMCQCodes.codeRefs.length);
+            }
+
+            var codeRef = singleMCQCodes.codeRefs[codeRefIndex];
+
+            //get a alphanum string of length 20
+            var alphaNum1 = helper.getAlphaNumString(20);
+            var sum = 0;
+
+            //Go thru the codeRef indexes of alphaNum1 and sum the values
+            for(var i in codeRef) {
+                sum += isNaN(codeRef[i]) ? helper.alphaToNum(codeRef[i]) : codeRef[i];
+            }
+
+            //if the sum goes above 19, circulize it
+            sum = sum % 20;
+
+            //Take another alphanum of length 20
+            var alphaNum2 = helper.getAlphaNumString(20);
+
+            //place ans in sum-th inde of alphanum2
+            alphaNum2 = helper.replaceStringAt(alphaNum2, sum, ans);
+
+            return ('A' + codeRefIndex + '-' + helper.breakIntoFives(alphaNum1 + alphaNum2));
+        }
+
+
+        /*
+        * This function is just opposite of makeKeyForSingleAnsMCQ
+        */
+        function decodeKeyForSingleAnsMCQ (key) {
+            var splitted = key.split('-');
+            var codeRefIndex = parseInt(splitted[0].substr(1));
+            var codeRef = singleMCQCodes.codeRefs[codeRefIndex];
+
+            var alphaNum1 = splitted[1] + splitted[2] + splitted[3] + splitted[4];
+            var alphaNum2 = splitted[5] + splitted[6] + splitted[7] + splitted[8];
+
+            var sum = 0;
+
+            //Go thru the codeRef indexes of alphaNum1 and sum the values
+            for(var i in codeRef) {
+                sum += isNaN(codeRef[i]) ? helper.alphaToNum(codeRef[i]) : codeRef[i];
+            }
+
+            //if the sum goes above 19, circulize it
+            sum = sum % 20;
+
+            return alphaNum2[sum];
+        }
+
+
+        /*
+        * This function takes an Array of Chars as ans of MultiAnsMCQ
+        * and makes a key where the array is hidden
+        *
+        * The key will be of structure
+        * CC-XXXXX-XXXXX-XXXXX-XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+        * i.e
+        * CS-X(20)-X(20)
+        *
+        * C - The code, for MultiAnsMCQ, it is 'B'
+        * S - The no of correct answers, Alpha, cant be greater than 25
+        * 
+        * X(20) - Unique value of 0 to 19, alphanumeric and randomized
+        * i.e. A3G9K..... upto 20th place
+        *
+        * NEXT X(20) will hold the answers in the index places stored in First
+        * i.e. one after another A,3,G,9 will be filled with answers S number
+        * of options
+        *
+        */
+        function makeKeyForMultiAnsMCQ (ansArr) {
+            //store the size or the number of correct answers
+            // in variable 's'
+            var s = helper.numToAlpha(ansArr.length);
+
+            //randomize 0 to 19 index values
+            var randIndices = helper.randomizeArray(availableIndices20);
+
+            //Create the first X(20) i.e. x1
+            var x1 = "";
+
+            for (var i=0; i<randIndices.length; i++) {
+                //If the index value > 9, definitely store it as ALPHA
+                //Also Store it as Alpha depending on some randomeness
+                if(randIndices[i] > 9 || Math.floor(Math.random()*100) % 4 === 0) {
+                    x1 += helper.numToAlpha(randIndices[i]);
+                }
+                else {
+                    x1 += randIndices[i];
+                }
+            }
+
+            var x2 = helper.getAlphaNumString(20);
+            var ind;
+            // store ans in the x2 String in the corresponding places as
+            // stored in x1
+            for(var i=0; i<ansArr.length; i++) {
+                ind = isNaN(x1[i]) ? helper.alphaToNum(x1[i]) : x1[i];
+                x2 = helper.replaceStringAt(x2, ind, ansArr[i]);
+            }
+
+            x1 = helper.breakIntoFives(x1);
+            x2 = helper.breakIntoFives(x2);
+
+            return 'B' + s + '-' + x1 + '-' + x2;
+        }
+
+
+        /*
+        * This is opposite of makeKeyForMultiAnsMCQ
+        * 
+        * key structure will be
+        * CS-XXXXX-XXXXX-XXXXX-XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+        * => CS-XXXXXXXXXXXXXXXXXXXX-XXXXXXXXXXXXXXXXXXXX
+        *
+        * C will be 'B' for MultiAnsMCQ
+        * S is an Alpha denoting NoOfCorrectAns
+        * 
+        * firstX20 will hold the indexPositions of correct answers of 
+        * SecondX20
+        */
+        function decodeKeyForMultiAnsMCQ (key) {
+
+            var splitted = key.split('-');
+            var code = splitted[0];
+            var alphaNum1 = splitted[1] + splitted[2] + splitted[3] + splitted[4];
+            var alphaNum2 = splitted[5] + splitted[6] + splitted[7] + splitted[8];
+
+            var noOfCorrectOptions = code.substr(1);
+            noOfCorrectOptions = isNaN(noOfCorrectOptions) ? helper.alphaToNum(noOfCorrectOptions) : noOfCorrectOptions;
+
+            var ans = [];
+            var ind;
+            for(var i=0; i<noOfCorrectOptions; i++) {
+                ind = isNaN(alphaNum1[i]) ? helper.alphaToNum(alphaNum1[i]) : alphaNum1[i];
+                ans.push(alphaNum2[ind]);                
+            }
+
+            return ans;
+        }
+
     }
-
-    var noOfCorrectOptions = alphaNum1[fixedIndex];
-    var shift = (noOfCorrectOptions <= 4)  ? 1 : 0;
-    var correctAns = [];
-    var gap = Math.floor(15 / noOfCorrectOptions);
-
-    for (var i=0; correctAns.length < noOfCorrectOptions; i++) {
-  
-      correctAns.push( alphaNum20 [ alphaNum15 [i*gap + shift] ] );
-      shift *= -1;
-    }
-
-    return correctAns;
-}
-
-
-/*
-* This function will test The functions of this Entire Module
-* It is like a self health check
-*/
-var lineSep = "\n*******************************************\n";
-function test () {
-    testMultiAnsMCQ();
-}
-
-function testMultiAnsMCQ() {
-    console.log(lineSep);
-    console.log("Testing Module: keymaker");
-    console.log(lineSep);
-    console.log("Testing functions makeKey and decodeKey for Multi Answer MCQ\n");
-    var ans = ['C', 'D'];
-    console.log('Testing with answer array = ' + JSON.stringify(ans) + '\n');
-    var key = makeKey(ans);
-    console.log("key received from makeKey = " + key + '\n');
-    var backToAns = decodeKey(key);
-    console.log("decoded ans from decodeKey = " + JSON.stringify(backToAns) + '\n');
-    console.log('Test Passed = ' + (JSON.stringify(ans) === JSON.stringify(backToAns)));
-    console.log(lineSep);
-}

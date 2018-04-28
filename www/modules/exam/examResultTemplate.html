@@ -126,10 +126,14 @@
             </div>
             <div class="panel-body options-container normal-font collapse-body">
                 <label>You chose : </label>
-                <label>{{qa.incorrectAns}}</label>
+                <div data-ng-repeat="ans in qa.incorrectAns">
+                    {{ans}}
+                </div>
                 <br/>
                 <label>Correct Answer : </label>
-                <label>{{qa.correctAns}}</label>
+                <div data-ng-repeat="ans in qa.correctAns">
+                    {{ans}}
+                </div>
             </div>
         </div>
     </div>

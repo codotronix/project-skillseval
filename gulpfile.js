@@ -8,7 +8,8 @@ const fs = require('fs'),
     javascriptObfuscator = require('gulp-javascript-obfuscator'),
     templateCache = require('gulp-angular-templatecache');
 
-
+//Now requiring custom modules
+const dataProcessor = require('./tools/node-tools/data-processor/process');
 
 /*
 * Encrypt all data files from devData and put them in data folder

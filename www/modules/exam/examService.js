@@ -113,19 +113,80 @@
             for(var i in qs) {
                 ++totalQ;
 
-                if (qs[i].chosenAns === 'Z') {
-                    ++notAnswered;
-                }
-                else {
-                    if(qs[i].chosenAns === (qs[i].ans || secretService.getAnswer(qs[i].key))) {
-                        ++correct;
+                //If SingleAnsMCQ
+                if (qs[i].type === 'A') {
+                    if (qs[i].chosenAns === 'Z') {
+                        ++notAnswered;
                     }
                     else {
-                        //++incorrect;
-                        qs[i].incorrectAns = qs[i].options[optionIndices.indexOf(qs[i].chosenAns)];
-                        qs[i].correctAns = qs[i].options[optionIndices.indexOf(qs[i].ans || secretService.getAnswer(qs[i].key))];
-                        incorrectQs.push(qs[i]);
+                        var correctAns = (qs[i].ans || secretService.getAnswer(qs[i].key));
+                        if(qs[i].chosenAns === correctAns) {
+                            ++correct;
+                        }
+                        else {
+                            //++incorrect;
+                            qs[i].incorrectAns = [];
+                            qs[i].correctAns = [];
+                            qs[i].incorrectAns.push(qs[i].chosenAns + '. ' + qs[i].options[optionIndices.indexOf(qs[i].chosenAns)]);
+                            qs[i].correctAns.push(correctAns + '. ' + qs[i].options[optionIndices.indexOf(correctAns)]);
+                            incorrectQs.push(qs[i]);
+                        }
                     }
+                }
+
+                //If MultiAnsMCQ
+                else if (qs[i].type === 'B') {
+                    var unattended = true;
+                    var ansArray = [];
+                    /*
+                    * see if it is unattended, i.e. All Checkbox False
+                    * in MultiAnsMCQ qs[i].chosenAns is a JSON with
+                    * options marked either true or false
+                    * like, if correct options are [A, C]
+                        {
+                            A: true,
+                            C: true
+                        }
+                    */
+                    for(var option in qs[i].chosenAns) {
+                        if(qs[i].chosenAns[option]) {
+                            unattended = false;
+                            ansArray.push(option);
+                        }
+                    }
+
+                    //if unattended then Not Answered
+                    if(unattended) {
+                        ++notAnswered;
+                    }
+                    else {
+
+                        var correctAnsArray = qs[i].ans || secretService.getAnswer(qs[i].key);
+                        //if correct
+                        if(JSON.stringify(ansArray) === JSON.stringify(correctAnsArray)) {
+                            ++correct;
+                        }
+                        //else incorrect
+                        else {
+                            qs[i].incorrectAns = [];
+                            qs[i].correctAns = [];
+                            ansArray.map(function(option) {
+                                qs[i].incorrectAns.push(option + '. ' + qs[i].options[optionIndices.indexOf(option)]);
+                            });
+
+                            correctAnsArray.map(function(option) {
+                                qs[i].correctAns.push(option + '. ' + qs[i].options[optionIndices.indexOf(option)]);
+                            });
+
+                            incorrectQs.push(qs[i]);
+                        }
+
+                    }
+                }
+
+                //If type flag is not set from html, that means something is FISHY
+                else {
+                    console.log("Cannot decide type for " + JSON.stringify(qs[i]));
                 }
             }
 

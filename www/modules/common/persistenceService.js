@@ -18,8 +18,8 @@
 
         function init () {
             dataStore = JSON.parse(localStorage.getItem("dataStore")) || {};
-            console.log("dataStore");
-            console.log(dataStore);
+            //console.log("dataStore");
+            //console.log(dataStore);
         }
 
 

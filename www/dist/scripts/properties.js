@@ -3,7 +3,7 @@
         "hostType": "web",
         "webRoot": "",
 		"appRoot": "https://knexaa.bitbucket.io",
-		"dataRoot": "data",
+		"dataRoot": "devData",
         "xlib": {
             index: "raw:library",
             coding: "raw:library/coding"

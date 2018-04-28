@@ -4,7 +4,8 @@
 const fs = require('fs');
 const path = require('path');
 const CryptoJS = require("crypto-js");
-var AES = require("crypto-js/aes")
+const keymaker = require('./keymaker');
+var AES = require("crypto-js/aes");
 const key = "_S6h1K!N8c$7FkM-W#92yTix$@X9sZ";
 var resultantFileList = [];
 
@@ -142,13 +143,15 @@ const writeToFile = (fileName, content) => {
 function encryptAnswers(qas) {
     qas.forEach(qa => {
         //skip if already encrypted
-        if(qa.ans.trim().length > 1) {
-            return;
-        }
-        var key = createEncryptedKey(qa.ans);
+        // if(qa.ans.trim().length > 1) {
+        //     return;
+        // }
+        //var key = createEncryptedKey(qa.ans);
+        var key = keymaker.makeKey(qa.ans);
 
         //check if decryption actually gives back the same result
-        if(decryptKey(key) === qa.ans) {
+        var keyToAns = keymaker.decodeKey(key);
+        if(JSON.stringify(qa.ans) === JSON.stringify(keyToAns)) {
             delete qa.ans;
             qa.key = key;
         }
@@ -157,7 +160,7 @@ function encryptAnswers(qas) {
             console.log("Decryption didnot give the same result");
             console.log("key = " + key);
             console.log("real ans = " + qa.ans);
-            console.log("decrypted ans = " + decryptKey(key));
+            console.log("decrypted ans = " + keyToAns);
             console.log("**************************************");
         }
     });

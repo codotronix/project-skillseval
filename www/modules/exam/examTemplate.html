@@ -40,7 +40,14 @@
                     </span>
                 </div>
             </div>
-            <div class="panel-body options-container" data-ng-init="qa.chosenAns='Z'">
+
+
+            
+            <!-- SingleAnsMCQ Options STARTS Here-->
+            <div class="panel-body options-container"
+            data-ng-if="(qa.key && qa.key[0] === 'A') || (qa.ans && typeof(qa.ans) === 'string' && qa.ans.length === 1)" 
+            data-ng-init="qa.chosenAns='Z'; qa.type='A';">
+
                 <div data-ng-repeat="op in qa.options">
 
                     <pre data-ng-show="(op.indexOf('\n') >= 0 || op.indexOf('br>') >= 0)"><input type="radio" value="{{vm.optionIndices[$index]}}" data-ng-model="qa.chosenAns"> {{vm.optionIndices[$index] + ". " + op.trim()}}</pre>
@@ -56,6 +63,27 @@
                     <pre><input type="radio" value="Z" data-ng-model="qa.chosenAns"> Z. I don't want to answer</pre> 
                 </div>
             </div>
+            <!-- SingleAnsMCQ Options ENDS Here-->
+
+
+            <!-- MultiAnsMCQ Options STARTS Here-->
+            <div class="panel-body options-container" 
+            data-ng-if="(qa.key && qa.key[0] === 'B') || (qa.ans && Array.isArray(qa.ans))"
+            data-ng-init="qa.chosenAns={}; qa.type='B';">
+                <div data-ng-repeat="op in qa.options">
+
+                    <pre data-ng-show="(op.indexOf('\n') >= 0 || op.indexOf('br>') >= 0)"><input type="checkbox" value="{{vm.optionIndices[$index]}}" data-ng-model="qa.chosenAns[vm.optionIndices[$index]]"> {{vm.optionIndices[$index] + ". " + op.trim()}}</pre>
+
+
+                    <span data-ng-show="(op.indexOf('\n') < 0 && op.indexOf('br>') < 0)" class="option-radio-container">
+                        <input type="checkbox" value="{{vm.optionIndices[$index]}}" data-ng-model="qa.chosenAns[vm.optionIndices[$index]]"> {{vm.optionIndices[$index] + ". " + op.trim()}}
+                    </span>
+                </div>
+            </div>
+            <!-- MultiAnsMCQ Options ENDS Here-->
+
+
+
         </div>
     </div>
     <div class="button-footer">

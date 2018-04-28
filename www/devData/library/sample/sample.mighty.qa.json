@@ -1,0 +1,32 @@
+[
+{
+    "q": "Which among the following is not a bird?",
+    "options": ["Crow", "Peacock", "Tiger", "None of the above"],
+    "ans": "C"
+},
+{
+    "q": "Which among the following is not an animal?",
+    "options": ["Lion", "Elephant", "Carrot", "Tiger"],
+    "ans": "C"
+},
+{
+    "q": "Which among the following is not a country?",
+    "options": ["India", "Nepal", "Bhutan", "Rose"],
+    "ans": "D"
+},
+{
+    "q": "Which among the following is a flower?",
+    "options": ["Rose", "Nepal", "Apple", "Mango"],
+    "ans": "A"
+},
+{
+    "q": "Which among the following are fruits?",
+    "options": ["Rose", "Nepal", "Apple", "Mango"],
+    "ans": ["C", "D"]
+},
+{
+    "q": "Which is the most popular search engine that everyone uses?",
+    "options": ["Bing", "Google", "DuckDuckGo", "None of the above"],
+    "ans": "B"
+}
+]
