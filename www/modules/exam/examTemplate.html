@@ -54,7 +54,7 @@
                     <label data-ng-show="(op.indexOf('\n') >= 0 || op.indexOf('br>') >= 0)" class="option-radio-container flat-bottom checkcontainer">
                         {{vm.optionIndices[$index] + ". "}}
                         <input type="radio" value="{{vm.optionIndices[$index]}}" data-ng-model="qa.chosenAns">                        
-                        <span class="checkmark"></span>
+                        <span class="radiobtn"></span>
                     </label>
                     <pre data-ng-show="(op.indexOf('\n') >= 0 || op.indexOf('br>') >= 0)">{{op.trim()}}</pre>
 
