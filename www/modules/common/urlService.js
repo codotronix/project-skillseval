@@ -9,11 +9,6 @@
 		var webRoot = angular._9.webRoot;
 		var dataRoot = angular._9.dataRoot;
 
-		var partialLibUrl = {
-			"libName": "library",
-			"partUrl": "library"
-		};	//defualt to library index
-
 		return {
 			getDataRootUrl: getDataRootUrl,
 			getLibraryUrl: getLibraryUrl,
@@ -41,7 +36,7 @@
 		}
 
 		function getPathToLibrary (libName) {
-			var pathToLib = angular._9.xlib[libName] || "raw:library";
+			var pathToLib = angular._9.xlib[libName] || "raw:xlib";
 			
 			//If does not start with raw, then must be encoded
 			if (pathToLib.substr(0,4) !== "raw:") {
