@@ -13,8 +13,8 @@
         "appRoot": "https://knexaa.bitbucket.io",
         "dataRoot": "data",
         "xlib": {
-            "index": "raw:library",
-            "coding": "raw:library/coding"
+            "index": "raw:xlib",
+            "coding": "raw:xlib/coding"
         },
         
         "config": {
