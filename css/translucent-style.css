@@ -1,0 +1,87 @@
+body.translucent {
+	background: url('../images/the-person-2887609_1280.jpg') 0 0 repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+body.translucent .panel {
+    background: transparent;
+}
+
+body.translucent .panel .panel-body {
+    background: #fff;
+}
+
+.translucent .header {
+	background: #000;
+    background: linear-gradient(to right, #000, #000, #4b00ff,#000,  #000);    
+}
+
+.translucent .icon-card .inner-container {
+	background: rgba(0, 0, 0, .6);
+}
+
+.translucent .lib-card .inner-container {    
+    box-shadow: 1px 1px 4px 1px #000000;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.translucent .coloured-card:nth-child(11n+1) .inner-container {
+	background: rgba(110, 142, 14, 0.8);
+}
+
+.translucent .coloured-card:nth-child(11n+2) .inner-container {
+	background: rgba(74, 59, 146, 0.8);
+}
+
+.translucent .coloured-card:nth-child(11n+3) .inner-container {
+	background: rgba(37, 114, 235, 0.8);
+}
+
+.translucent .coloured-card:nth-child(11n+4) .inner-container {
+	background: rgba(173, 16, 60, 0.8);
+}
+
+.translucent .coloured-card:nth-child(11n+5) .inner-container {
+	background: rgba(99, 47, 0, 0.8);
+}
+
+.translucent .coloured-card:nth-child(11n+6) .inner-container {
+	background: rgba(176, 30, 0, 0.8);
+}
+
+.translucent .coloured-card:nth-child(11n+7) .inner-container {
+    background: rgba(193, 0, 79, 0.8);
+}
+
+.translucent .coloured-card:nth-child(11n+8) .inner-container {
+    background: rgba(114, 0, 172, 0.8);
+}
+
+.translucent .coloured-card:nth-child(11n+9) .inner-container {
+    background: rgba(70, 23, 180, 0.8);
+}
+
+.translucent .coloured-card:nth-child(11n+10) .inner-container {
+    background: rgba(255, 179, 0, 0.8);
+}
+
+.translucent .heading {
+	background: rgba(84, 84, 203, 0.8);
+}
+
+.translucent #rules-dialog {
+	background: rgba(256, 256, 256, .9);
+}
+
+.translucent .left-menu-panel {
+	background: rgba(0,0,0,.9);
+}
+
+.translucent .panel-view-area {
+	background: rgba(255, 255, 255, .7);
+}
+
+.translucent .coming-soon-tag .coming-soon-text {
+	background: rgba(255, 255, 0, .7);
+}
