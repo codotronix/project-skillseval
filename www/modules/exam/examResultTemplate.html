@@ -1,4 +1,4 @@
-<div class="col-xs-12">
+<div class="col-xs-12" id="exam-result-page">
 
     <!-- Exam Statistics Panel -->
     <div class="col-xs-12 col-sm-6 col-md-6">
@@ -63,7 +63,7 @@
 
 
     <!-- Marksheet and Certificate Link Panel -->
-    <div class="col-xs-12 col-sm-6 col-md-6">
+    <div id="marksheet-certificate-panel" class="col-xs-12 col-sm-6 col-md-6">
         <div class="panel panel-primary">
             <div class="heading panel-heading collapse-header">
                 <b>Marksheet and Certificate</b>
@@ -92,10 +92,18 @@
                         </p>
                     </div>
                     <div class="col-xs-12">
-                        <input type="text" class="form-control" data-ng-model="vm.certificateLink"/>
+                        <input type="text" class="form-control" data-ng-model="vm.certificateLink" id="link-of-certificate" readonly="true" />
+                        <span class="copy-to-clipboard" data-ng-click="mvm.copyToClipboard('link-of-certificate')">
+                            <i class="fa fa-clipboard icon"></i>
+                            Copy
+                        </span>
                     </div>
                     <div class="col-xs-12">
-                        <a href="javascript:void(0);" data-ng-click="vm.showCertificate()">Show certificate &gt;</a>
+                        <a href="javascript:void(0);" data-ng-click="vm.showCertificate()" class="btn btn-primary margin-top-15 pull-right">
+
+                        <i class="fa fa-certificate cert-icon"></i>
+                        Show certificate &gt;
+                        </a>
                     </div>
                 </div>
             </div>

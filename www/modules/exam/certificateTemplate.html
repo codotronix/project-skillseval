@@ -1,5 +1,5 @@
 <div id="certificate-body" class="col-xs-12 padding-0">
-    <img id="certificate-template-image" class="certificate-bg img-responsive" src="images/cert.png" alt="certificate-background-image"/>
+    <img id="certificate-template-image" class="certificate-bg img-responsive" src="images/knexaa-certificate-template.png" alt="certificate-background-image"/>
 
     <div class="decorative-col left col-xs-3 col-sm-2 col-md-1"></div>
     <div class="cert-text col-xs-6 col-sm-8 col-md-10">
@@ -15,7 +15,13 @@
 
 		<div class="cert-code">
 			This certificate can be verified using the follwoing certificate-code<br/>
-			<span class="break-all-word">{{vm.certCode}}</span>
+			<div class="break-all-word">
+                <textarea id="cert-code-text-area" readonly="true">{{vm.certCode}}</textarea>
+                <span class="copy-to-clipboard no-print" data-ng-click="mvm.copyToClipboard('cert-code-text-area')">
+                    <i class="fa fa-clipboard icon"></i>
+                    Copy
+                </span>
+            </div>
 		</div>
     </div>
     <div class="decorative-col right col-xs-3 col-sm-2 col-md-1"></div>

@@ -8,7 +8,7 @@
         mvm.devInProgressMsg = undefined;
         mvm.gotoPrevPage = gotoPrevPage;
         mvm.isLoaderVisible = modalService.isLoaderVisible;
-
+        mvm.copyToClipboard = copyToClipboard;
 
 
         init();
@@ -32,6 +32,13 @@
             // }, 100);
         }
 
+
+        function copyToClipboard (elemID) {
+            document.getElementById(elemID).select();
+            document.execCommand('copy');
+
+            alert("Copied to clipboard...");
+        }
         
     }
 })();

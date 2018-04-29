@@ -318,7 +318,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="0.42224254"
      inkscape:cx="-928.59758"
-     inkscape:cy="464.52866"
+     inkscape:cy="-293.32961"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -843,107 +843,92 @@
            id="path4661" />
       </g>
     </g>
+    <rect
+       style="opacity:1;fill:url(#linearGradient4561);fill-opacity:1;fill-rule:evenodd;stroke:#4b00ff;stroke-width:0.99851501;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4216"
+       width="1411.4301"
+       height="877.38739"
+       x="-1631.4293"
+       y="909.50433" />
+    <rect
+       style="opacity:1;fill:url(#linearGradient4571);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.56156933;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4563"
+       width="225.09593"
+       height="630.07281"
+       x="-453.85468"
+       y="-1780.1274"
+       transform="matrix(0.99999456,-0.00329699,-0.00262995,-0.99999654,0,0)" />
+    <rect
+       style="opacity:1;fill:url(#linearGradient4269);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:9;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:47.70000076;stroke-opacity:1"
+       id="rect4261"
+       width="1397.1428"
+       height="231.42857"
+       x="-1625.7142"
+       y="915.79077" />
     <g
-       id="g4322">
-      <rect
-         y="909.50433"
-         x="-1631.4293"
-         height="877.38739"
-         width="1411.4301"
-         id="rect4216"
-         style="opacity:1;fill:url(#linearGradient4561);fill-opacity:1;fill-rule:evenodd;stroke:#4b00ff;stroke-width:0.99851501;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-      <rect
-         transform="matrix(0.99999456,-0.00329699,-0.00262995,-0.99999654,0,0)"
-         y="-1780.1274"
-         x="-453.85468"
-         height="630.07281"
-         width="225.09593"
-         id="rect4563"
-         style="opacity:1;fill:url(#linearGradient4571);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.56156933;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-      <rect
-         y="915.79077"
-         x="-1625.7142"
-         height="231.42857"
-         width="1397.1428"
-         id="rect4261"
-         style="opacity:1;fill:url(#linearGradient4269);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:9;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:47.70000076;stroke-opacity:1" />
-      <g
-         id="g4223"
-         transform="matrix(0.71173477,0,0,0.71173477,-913.63529,521.02804)">
+       transform="matrix(0.71173477,0,0,0.71173477,-913.63529,521.02804)"
+       id="g4223">
+      <flowRoot
+         style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:98.68502808px;line-height:125%;font-family:'URW Chancery L';-inkscape-font-specification:'URW Chancery L Medium Italic';letter-spacing:0px;word-spacing:0px;fill:#6767e6;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="flowRoot4225"
+         xml:space="preserve"
+         transform="matrix(1,0,0,0.70318926,-837.40928,579.60155)"><flowRegion
+           id="flowRegion4227"
+           style="fill:url(#radialGradient4253);fill-opacity:1;stroke:url(#linearGradient4255)"><rect
+             style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'URW Chancery L';-inkscape-font-specification:'URW Chancery L Medium Italic';fill:#6767e6;fill-opacity:1;stroke:none;stroke-opacity:1"
+             y="29.349129"
+             x="85.523651"
+             height="296.05515"
+             width="881.11633"
+             id="rect4229" /></flowRegion><flowPara
+           style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:222.04130554px;font-family:'URW Chancery L';-inkscape-font-specification:'URW Chancery L Medium Italic';fill:#6767e6;fill-opacity:1;stroke:none;stroke-opacity:1"
+           id="flowPara4231">nexaa</flowPara></flowRoot>      <g
+         id="g4233">
+        <circle
+           r="112.85714"
+           cy="693.79083"
+           cx="-853.71423"
+           id="circle4235"
+           style="opacity:1;fill:#4b00ff;fill-opacity:1;stroke:#4b00ff;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
         <flowRoot
-           transform="matrix(1,0,0,0.70318926,-837.40928,579.60155)"
+           inkscape:transform-center-y="-17.142857"
+           inkscape:transform-center-x="-620"
+           style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:98.68502808px;line-height:125%;font-family:'URW Chancery L';-inkscape-font-specification:'URW Chancery L Medium Italic';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           id="flowRoot4237"
            xml:space="preserve"
-           id="flowRoot4225"
-           style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:98.68502808px;line-height:125%;font-family:'URW Chancery L';-inkscape-font-specification:'URW Chancery L Medium Italic';letter-spacing:0px;word-spacing:0px;fill:#6767e6;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><flowRegion
-             style="fill:url(#radialGradient4253);fill-opacity:1;stroke:url(#linearGradient4255)"
-             id="flowRegion4227"><rect
-               id="rect4229"
-               width="881.11633"
-               height="296.05515"
-               x="85.523651"
+           transform="matrix(1,0,0,0.70318926,-1043.486,555.63138)"><flowRegion
+             id="flowRegion4239"
+             style="fill:url(#radialGradient4257);fill-opacity:1;stroke:url(#linearGradient4259)"><rect
+               style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'URW Chancery L';-inkscape-font-specification:'URW Chancery L Medium Italic';fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-opacity:1"
                y="29.349129"
-               style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'URW Chancery L';-inkscape-font-specification:'URW Chancery L Medium Italic';fill:#6767e6;fill-opacity:1;stroke:none;stroke-opacity:1" /></flowRegion><flowPara
-             id="flowPara4231"
-             style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:222.04130554px;font-family:'URW Chancery L';-inkscape-font-specification:'URW Chancery L Medium Italic';fill:#6767e6;fill-opacity:1;stroke:none;stroke-opacity:1">nexaa</flowPara></flowRoot>        <g
-           id="g4233">
-          <circle
-             style="opacity:1;fill:#4b00ff;fill-opacity:1;stroke:#4b00ff;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-             id="circle4235"
-             cx="-853.71423"
-             cy="693.79083"
-             r="112.85714" />
-          <flowRoot
-             transform="matrix(1,0,0,0.70318926,-1043.486,555.63138)"
-             xml:space="preserve"
-             id="flowRoot4237"
-             style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:98.68502808px;line-height:125%;font-family:'URW Chancery L';-inkscape-font-specification:'URW Chancery L Medium Italic';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-             inkscape:transform-center-x="-620"
-             inkscape:transform-center-y="-17.142857"><flowRegion
-               style="fill:url(#radialGradient4257);fill-opacity:1;stroke:url(#linearGradient4259)"
-               id="flowRegion4239"><rect
-                 id="rect4241"
-                 width="881.11633"
-                 height="296.05515"
-                 x="85.523651"
-                 y="29.349129"
-                 style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'URW Chancery L';-inkscape-font-specification:'URW Chancery L Medium Italic';fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-opacity:1" /></flowRegion><flowPara
-               id="flowPara4243"
-               style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:222.04130554px;font-family:'URW Chancery L';-inkscape-font-specification:'URW Chancery L Medium Italic';fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-opacity:1">K</flowPara></flowRoot>        </g>
-        <flowRoot
-           transform="matrix(0.72392613,0,0,1.3405756,-803.31953,-31.972149)"
-           style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#6767e6;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           id="flowRoot4245"
-           xml:space="preserve"><flowRegion
-             id="flowRegion4247"><rect
-               style="fill:#6767e6;fill-opacity:1"
-               y="592.36218"
-               x="85.714287"
-               height="88.571411"
-               width="817.14288"
-               id="rect4249" /></flowRegion><flowPara
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:45px;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow Condensed';fill:#6767e6;fill-opacity:1"
-             id="flowPara4251">Knowledge. Exam. Anytime. Anywhere.</flowPara></flowRoot>      </g>
-      <rect
-         style="opacity:1;fill:url(#linearGradient4575);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.56156933;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         id="rect4573"
-         width="225.09593"
-         height="630.07281"
-         x="1403.8823"
-         y="1146.1803"
-         transform="matrix(-0.99999456,0.00329699,0.00262995,0.99999654,0,0)" />
-    </g>
-    <circle
-       r="310.91586"
-       cy="1469.5878"
-       cx="-925.71429"
-       id="circle4387"
-       style="opacity:1;fill:#ffffff;fill-opacity:0.94210523;stroke:#4b00ff;stroke-width:13.77475357;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.08947369" />
-    <circle
-       style="opacity:1;fill:#4b00ff;fill-opacity:1;stroke:#4b00ff;stroke-width:13.77475357;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.08947369"
-       id="circle4368"
-       cx="-925.71429"
-       cy="1469.5878"
-       r="310.91586" />
+               x="85.523651"
+               height="296.05515"
+               width="881.11633"
+               id="rect4241" /></flowRegion><flowPara
+             style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-size:222.04130554px;font-family:'URW Chancery L';-inkscape-font-specification:'URW Chancery L Medium Italic';fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-opacity:1"
+             id="flowPara4243">K</flowPara></flowRoot>      </g>
+      <flowRoot
+         xml:space="preserve"
+         id="flowRoot4245"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#6767e6;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         transform="matrix(0.72392613,0,0,1.3405756,-803.31953,-31.972149)"><flowRegion
+           id="flowRegion4247"><rect
+             id="rect4249"
+             width="817.14288"
+             height="88.571411"
+             x="85.714287"
+             y="592.36218"
+             style="fill:#6767e6;fill-opacity:1" /></flowRegion><flowPara
+           id="flowPara4251"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:45px;font-family:'Liberation Sans Narrow';-inkscape-font-specification:'Liberation Sans Narrow Condensed';fill:#6767e6;fill-opacity:1">Knowledge. Exam. Anytime. Anywhere.</flowPara></flowRoot>    </g>
+    <rect
+       transform="matrix(-0.99999456,0.00329699,0.00262995,0.99999654,0,0)"
+       y="1146.1803"
+       x="1403.8823"
+       height="630.07281"
+       width="225.09593"
+       id="rect4573"
+       style="opacity:1;fill:url(#linearGradient4575);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.56156933;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <flowRoot
        transform="matrix(2.7549508,0,0,1.9372518,-1448.5264,1088.9653)"
        xml:space="preserve"

@@ -761,12 +761,19 @@ a:hover, a:focus {
 }
 
 #certificate-body .cert-code {
+    position: relative;
     margin-top: 30px;
     font-size: 14px;
     text-align: left;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #7280b5;
     word-break: break-all;
+}
+
+#certificate-body .cert-code textarea {
+    width: 100%;
+    border: none;
+    outline: none;
 }
 
 #certificate-template-image {
@@ -863,6 +870,7 @@ a:hover, a:focus {
 .exam-stats .panel-body div {
     border-bottom: 1px solid #ccc;
     padding: 5px 15px;
+    font-weight: bold;
 }
 
 .left-menu-panel {
@@ -983,4 +991,31 @@ a:hover, a:focus {
 
 .dev-in-progress-msg .msg a {
     color: #fffb00 !important;
+}
+
+#exam-result-page .panel-body {
+    font-size: 16px;
+}
+
+#marksheet-certificate-panel .cert-icon {
+    color: #ff0;
+}
+
+.copy-to-clipboard {
+    display: inline-block;
+    font-size: 16px;
+    position: absolute;
+    top: 0px;
+    right: 16px;
+    background: #00f;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.copy-to-clipboard:hover {
+    background-color: #fff;
+    color: #00f;
 }
