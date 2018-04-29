@@ -6,11 +6,15 @@ const fs = require('fs'),
     rename = require("gulp-rename"),
     inject = require('gulp-inject-string'),
     javascriptObfuscator = require('gulp-javascript-obfuscator'),
-    templateCache = require('gulp-angular-templatecache');
+    templateCache = require('gulp-angular-templatecache'),
+    colors = require('colors');
 
 //Now requiring custom modules
 const dataProcessor = require('./tools/node-tools/data-processor/process');
 
+function sep () {
+    console.log("\n*********************************************\n".blue);
+}
 /*
 * Encrypt all data files from devData and put them in data folder
 */
@@ -19,9 +23,33 @@ gulp.task('devDataToDataProcess', function () {
 });
 
 gulp.task('checkPropertiesFiles', function() {
-    console.log("In checkPropertiesFiles...");
+    
     var data = fs.readFileSync('www/scripts/properties.js', "utf8");
-    console.log(data);
+
+    var startIdentifier = "/*STARTPOINT*/";
+    var startIndex = data.indexOf(startIdentifier) + startIdentifier.length;
+
+    var endIdentifier = "/*ENDPOINT*/";
+    var endIndex = data.indexOf(endIdentifier);
+    var size = endIndex - startIndex;
+
+    var propString = data.substr(startIndex, size).trim();
+
+    //console.log(propString);
+    var propJSON = JSON.parse(propString);
+
+    //Throw Exceptions if Check result is not Satisfactory
+    if(propJSON.dataRoot === "devData") {
+        sep();
+        throw " Properties file dataRoot should be 'data'. NOT 'devData'\n\n".red;
+
+    }
+
+    //propJSON.dataRoot = "data";
+
+    //propString = data.substr(0, startIndex) + JSON.stringify(propJSON) + data.substr(endIndex);
+
+    //fs.writeFileSync('www/scripts/properties.js', propString, "utf8");
 });
 
 //Process script files
@@ -103,14 +131,14 @@ gulp.task('copyAssets', function() {
 
 // This processes data 
 // and then builds the code
-gulp.task('all', ['devDataToDataProcess', 'concatScripts', 'createTemplateCache', 'removeDevScripts','copyAssets'], function () {
+gulp.task('all', ['checkPropertiesFiles', 'devDataToDataProcess', 'concatScripts', 'createTemplateCache', 'removeDevScripts','copyAssets'], function () {
     console.log('"gulp all" builds code+data, if you only needs to build the code, type "gulp code"');
 });
 
 //This only build the code
 //NOT Data
 //Because most of the time we only need the code to be updated, while data remains same
-gulp.task('code', ['concatScripts', 'createTemplateCache', 'removeDevScripts','copyAssets'], function () {
+gulp.task('code', ['checkPropertiesFiles', 'concatScripts', 'createTemplateCache', 'removeDevScripts','copyAssets'], function () {
     console.log('"gulp code" only builds the code, not the data, if you need to build code+data, type "gulp all"');
 });
 
