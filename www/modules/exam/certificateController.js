@@ -6,6 +6,8 @@
     function certController (secretService, examService, $location, modalService, $rootScope) {
         var vm = this;
         vm.certCode = undefined;
+        vm.showInfoTooltip = false;
+        vm.adjustDisplayForCert = adjustDisplayForCert;
 
         var certCodeArguments = [
             "nameOfUser",
@@ -45,7 +47,9 @@
                 vm.examName = ExCodes[vm.examName];
 
                 //set proper height to the decorative side columns
-                $('.decorative-col').height($('body').height());
+                //$('.decorative-col').height($('body').height());
+
+                adjustDisplayForCert();
 
                 //Finally hide the modal
                 modalService.hideLoader();
@@ -53,6 +57,36 @@
             function(err){
                 console.log(err);
             });
+        }
+
+
+        /*
+        * This function will ensure that the certificate will 
+        * always display properly
+        * If the browser is in Portrait mode, then it will apply a
+        * transform rotate 90 degree to show the certificate 
+        * in landscape way
+        *
+        */
+        function adjustDisplayForCert () {
+            var realWidth = 1440;
+            var realHeight = 900;
+
+            var winWidth = $(window).width();
+            var winHeight = $(window).height();
+
+            //i.e. If already in Landscape
+            //if(winWidth > winHeight) {
+                // $('#certificate-body').css({
+                //     "transform": "scale(" + (winWidth / realWidth) + ", " + (winHeight / realHeight) + ")"
+                // });
+            // }
+            // //if in portrait, make certificate landscape
+            // else {
+            //     $('#certificate-body').css({
+            //         "transform": "scale(" + (winWidth / realHeight) + ", " + (winHeight / realWidth) + ") rotate(-90deg)"
+            //     });
+            // }
         }
     }
 })();

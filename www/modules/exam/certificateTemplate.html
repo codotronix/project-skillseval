@@ -1,29 +1,47 @@
-<div id="certificate-body" class="col-xs-12 padding-0">
-    <img id="certificate-template-image" class="certificate-bg img-responsive" src="images/knexaa-certificate-template.png" alt="certificate-background-image"/>
+<div id="certificate-body">    
 
-    <div class="decorative-col left col-xs-3 col-sm-2 col-md-1"></div>
-    <div class="cert-text col-xs-6 col-sm-8 col-md-10">
+    <!-- <div class="decorative-col left col-xs-3 col-sm-2 col-md-1"></div> -->
+    <!-- <div class="cert-text col-xs-12 col-sm-12 col-md-12"> -->
+    <img class="certificate-template-img" src="images/knexaa-certificate-template-1440x900.png" alt="certificate-background-image"/>
+    <div class="text-section">
     	<div class="certificate-heading">Certificate of Completion</div>
-	    <div class="cert-line-1">This certificate is awareded to</div>
-		<div class="student-name">{{vm.nameOfUser}}</div>
-	    <div class="cert-line-2">for the Successfull Completion of</div>
-	    <div class="exam-name">{{vm.examName}}</div>
-	    <div class="connector">on</div>
-		<div class="cert-date">{{vm.examDate}}</div>
-		<div class="connector">by</div>
-		<div class="site-name">knexaa.com</div>
+        <div class="cert-line-1">This certificate is awareded to</div>
+    	<div class="student-name">{{vm.nameOfUser}}</div>
+        <div class="cert-line-2">for the Successfull Completion of</div>
+        <div class="exam-name">{{vm.examName}}</div>
+        <div class="connector">on</div>
+    	<div class="cert-date">{{vm.examDate}}</div>
+    	<div class="connector">by</div>
+    	<div class="site-name">knexaa.com</div>
 
-		<div class="cert-code">
-			This certificate can be verified using the follwoing certificate-code<br/>
-			<div class="break-all-word">
-                <textarea id="cert-code-text-area" readonly="true">{{vm.certCode}}</textarea>
-                <span class="copy-to-clipboard no-print" data-ng-click="mvm.copyToClipboard('cert-code-text-area')">
-                    <i class="fa fa-clipboard icon"></i>
-                    Copy
-                </span>
-            </div>
-		</div>
+    	<div class="cert-code">
+    		This certificate can be verified using the follwoing certificate-code
+            <br/>    		
+            <textarea id="cert-code-text-area" readonly="true">{{vm.certCode}}</textarea>
+    	</div>
     </div>
-    <div class="decorative-col right col-xs-3 col-sm-2 col-md-1"></div>
+    <!-- </div> -->
+    <!-- <div class="decorative-col right col-xs-3 col-sm-2 col-md-1"></div> -->
+
+    <div class="button-section no-print">
+        <i class="fa fa-clipboard copy icon" data-ng-click="mvm.copyToClipboard('cert-code-text-area')"></i>
+        <i class="fa fa-refresh refresh icon" data-ng-click="vm.adjustDisplayForCert()"></i>
+        <i class="fa fa-info-circle info icon" data-ng-click="vm.showInfoTooltip = !vm.showInfoTooltip">
+            <span class="info-tooltip" data-ng-show="vm.showInfoTooltip">
+                <ul>
+                    <li>
+                        <i class="fa fa-print icon"></i> - Press Ctrl + P to print this certificate from any modern desktop browsers like Chrome or Firefox and then choose save as file / pdf or print right away.
+                    </li>
+                    <li>
+                        <i class="fa fa-clipboard icon"></i> - This button will copy the certificate code
+                    </li>
+                    <li>
+                        <i class="fa fa-refresh icon"></i> - This button will adjust the certificate according to orientation of page
+                    </li>
+                </ul>
+                <i class="fa fa-sort-desc down-arrow"></i>
+            </span>
+        </i>        
+    </div>
 </div>
 

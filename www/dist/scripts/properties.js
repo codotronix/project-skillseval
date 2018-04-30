@@ -1,4 +1,3 @@
-
 /*
 * Properties file for the entire app to use
 * Do not remove STARTPOINT and ENDPOINT as they are used in gulp build scripts

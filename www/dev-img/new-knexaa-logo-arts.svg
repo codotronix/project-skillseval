@@ -214,7 +214,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -7346,8 +7346,9 @@
            style="fill:#ffffff" /></flowRegion><flowPara
          id="flowPara6871">aaaaaaaaaaaaaaawwww</flowPara></flowRoot>    <g
        id="g8090"
-       inkscape:export-xdpi="89.863205"
-       inkscape:export-ydpi="89.863205">
+       inkscape:export-xdpi="89.999985"
+       inkscape:export-ydpi="89.999985"
+       transform="matrix(0.71876842,0,0,0.70591692,-1418.999,320.5915)">
       <rect
          y="-183.85982"
          x="-5044.7109"

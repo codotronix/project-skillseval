@@ -160,7 +160,7 @@
                         ++notAnswered;
                     }
                     else {
-
+                        ansArray.sort();    //the options A,B,C,D must be in alphabatical order
                         var correctAnsArray = qs[i].ans || secretService.getAnswer(qs[i].key);
                         //if correct
                         if(JSON.stringify(ansArray) === JSON.stringify(correctAnsArray)) {
