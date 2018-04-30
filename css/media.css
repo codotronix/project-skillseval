@@ -173,5 +173,9 @@
         background: #4b00ff !important;
         color: #fff !important;
     }
+
+    .footer-button-panel {
+        display: block;
+    }
 }
 /************* END OF MEDIA QUERIES ***************************/

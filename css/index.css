@@ -1069,6 +1069,7 @@ a:hover, a:focus {
     right: 0;
     height: 50px;
     background: #000;
+    display: none;
 }
 
 .footer-button-panel .inner-container {
@@ -1081,5 +1082,54 @@ a:hover, a:focus {
     display: table-cell;
     font-size: 30px;
     color: #fff;
-    padding: 7px 0;
+    padding: 10px 0;
+}
+
+.modal-mask {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(174, 172, 222, 0.7);
+    z-index: 99999;
+}
+
+.modal-mask .modal-box {
+    background: #fff;
+    width: 300px;
+    position: relative;
+    margin: 150px auto;
+    min-height: 250px;
+    max-height: 450px;
+    border-radius: 5px;
+    color: #000;
+    font-size: 16px;
+    box-shadow: #000000 -3px 3px 14px 1px;
+    overflow: hidden;
+}
+
+.modal-mask .modal-box .heading {
+    background: #5454CB;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: left;
+}
+
+.modal-mask .modal-box .close-modal {
+    position: absolute;
+    font-size: 25px;
+    color: #fff;
+    right: 5px;
+    top: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.modal-mask .modal-box .body {
+    margin-top: 50px;
+    padding: 5px 15px;
+    font-size: 18px;
 }
