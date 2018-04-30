@@ -23,9 +23,15 @@
     <!-- </div> -->
     <!-- <div class="decorative-col right col-xs-3 col-sm-2 col-md-1"></div> -->
 
-    <div class="button-section no-print">
+</div>
+
+
+<!-- The Button Panel -->
+<div class="certificate-body-button-section no-print">
+        <i class="fa fa-home home icon" data-ng-click="vm.backToHome()"></i>
         <i class="fa fa-clipboard copy icon" data-ng-click="mvm.copyToClipboard('cert-code-text-area')"></i>
-        <i class="fa fa-refresh refresh icon" data-ng-click="vm.adjustDisplayForCert()"></i>
+        <i class="fa fa-compress compress icon" data-ng-click="vm.adjustDisplayForCert()"></i>
+        <i class="fa fa-expand expand icon" data-ng-click="vm.backToOriginalSize()"></i>
         <i class="fa fa-info-circle info icon" data-ng-click="vm.showInfoTooltip = !vm.showInfoTooltip">
             <span class="info-tooltip" data-ng-show="vm.showInfoTooltip">
                 <ul>
@@ -36,12 +42,14 @@
                         <i class="fa fa-clipboard icon"></i> - This button will copy the certificate code
                     </li>
                     <li>
-                        <i class="fa fa-refresh icon"></i> - This button will adjust the certificate according to orientation of page
+                        <i class="fa fa-compress icon"></i> - See full certificate at a glance
+                    </li>
+                    <li>
+                        <i class="fa fa-expand icon"></i> - See certificate at original size
                     </li>
                 </ul>
                 <i class="fa fa-sort-desc down-arrow"></i>
             </span>
         </i>        
     </div>
-</div>
 

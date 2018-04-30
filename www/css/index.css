@@ -693,6 +693,7 @@ a:hover, a:focus {
     font-size: 20px;
     font-weight: bold;
     margin: 0 -2px 7px;
+    text-align: center;
 }
 
 #certificate-body {
@@ -708,19 +709,22 @@ a:hover, a:focus {
     transform-origin: top left;
 }
 
-#certificate-body .button-section {
-    position: relative;
+.certificate-body-button-section {
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    right: 0;
     text-align: center;
 }
 
-#certificate-body .button-section .icon {
+.certificate-body-button-section .icon {
     padding: 5px 10px;
     font-size: 30px;
     cursor: pointer;
     position: relative;
 }
 
-#certificate-body .button-section .info-tooltip {
+.certificate-body-button-section .info-tooltip {
     position: absolute;
     display: inline-block;
     bottom: 55px;
@@ -728,23 +732,23 @@ a:hover, a:focus {
     border-radius: 4px;
     background: #222277;
     color: #fff;
-    width: 300px;
-    left: -120px;
+    width: 270px;
+    right: -55px;
     text-align: left;
 }
 
-#certificate-body .button-section .info-tooltip .down-arrow {
+.certificate-body-button-section .info-tooltip .down-arrow {
     position: absolute;
     color: #222277;
     font-size: 56px;
     bottom: -22px;
-    left: 126px;
+    right: 62px;
 }
 
-#certificate-body .button-section .info-tooltip ul li {
-    margin: 10px 0;
-    font-size: 22px;
-    line-height: 25px;
+.certificate-body-button-section .info-tooltip ul li {
+    margin: 5px 0;
+    font-size: 16px;
+    line-height: 18px;
     list-style: none;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -1056,4 +1060,26 @@ a:hover, a:focus {
 .copy-to-clipboard:hover {
     background-color: #fff;
     color: #00f;
+}
+
+.footer-button-panel {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: #000;
+}
+
+.footer-button-panel .inner-container {
+    display: table;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-button-panel .inner-container .icon {
+    display: table-cell;
+    font-size: 30px;
+    color: #fff;
+    padding: 7px 0;
 }

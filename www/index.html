@@ -61,8 +61,7 @@
     data-ng-class="{
     'app': !!$root.isMobileApp, 
     'web': !$root.isMobileApp,
-    'blank-background': ($root.pageID === 'EXAMENV'),
-    'hide-overflow': ($root.pageID === 'CERTIFICATE')}">
+    'blank-background': ($root.pageID === 'EXAMENV')}">
 
         <!-- <div id="firebaseui-auth-container"></div> -->
 
@@ -82,6 +81,8 @@
         <div class="container-fluid main-container">            
             <div data-ng-view=""></div>
         </div>
+
+        <div data-ng-include="'partials/footer-button-panel.html'" class="no-print"></div>
 
         <!-- JAVASCRIPT SECTION -->
         

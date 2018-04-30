@@ -8,6 +8,8 @@
         vm.certCode = undefined;
         vm.showInfoTooltip = false;
         vm.adjustDisplayForCert = adjustDisplayForCert;
+        vm.backToOriginalSize = backToOriginalSize;
+        vm.backToHome = backToHome;
 
         var certCodeArguments = [
             "nameOfUser",
@@ -77,16 +79,34 @@
 
             //i.e. If already in Landscape
             //if(winWidth > winHeight) {
-                // $('#certificate-body').css({
-                //     "transform": "scale(" + (winWidth / realWidth) + ", " + (winHeight / realHeight) + ")"
-                // });
-            // }
+                $('#certificate-body').css({
+                    "transform": "scale(" + (winWidth / realWidth) + ", " + (winHeight / realHeight) + ")"
+                });
+            //}
             // //if in portrait, make certificate landscape
             // else {
             //     $('#certificate-body').css({
             //         "transform": "scale(" + (winWidth / realHeight) + ", " + (winHeight / realWidth) + ") rotate(-90deg)"
             //     });
             // }
+
+            window.scrollTo(0, 0);
+        }
+
+        /*
+        * Show certificate in full height and width, i.e. 1440x900
+        */
+        function backToOriginalSize () {
+            $('#certificate-body').css({
+                "transform": "scale(1,1)"
+            });
+
+            window.scrollTo(550, 120);
+        }
+
+
+        function backToHome () {
+            $location.path('/home');
         }
     }
 })();
