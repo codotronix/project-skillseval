@@ -89,6 +89,10 @@ a:hover, a:focus {
     outline: none;
 }
 
+.hide-overflow {
+    overflow: hidden;
+}
+
 .break-all-word {
     word-break: break-all;
 }
@@ -693,41 +697,72 @@ a:hover, a:focus {
 
 #certificate-body {
     position: relative;
-    background: #fff;
-    margin-top: -15px;
-    /*background: url("../") 0 0 no-repeat;*/
-}
-
-#certificate-body .decorative-col {
-    height: 600px;
-}
-
-#certificate-body .decorative-col.left {
-    background: #6767E6; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(left top, #6767E6, #6767E6, #fff, #fff, #fff); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(bottom right, #6767E6, #6767E6, #fff, #fff, #fff); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(bottom right, #6767E6, #6767E6, #fff, #fff, #fff); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to bottom right, #6767E6, #6767E6, #fff, #fff, #fff); /* Standard syntax */
-}
-
-#certificate-body .decorative-col.right {
-    background: #6767E6; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(left top, #fff, #fff, #fff, #6767E6, #6767E6); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(bottom right, #fff, #fff, #fff, #6767E6, #6767E6); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(bottom right, #fff, #fff, #fff, #6767E6, #6767E6); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to bottom right, #fff, #fff, #fff, #6767E6, #6767E6); /* Standard syntax */
-}
-
-#certificate-body .certificate-heading {
-    font-size: 70px;
-}
-
-#certificate-body .cert-text {
+    width: 1440px;
+    height: 900px;
     font-family: 'DancingScript-Bold', cursive;
     text-align: center;
     color: #000;
     font-size: 25px;
     padding-bottom: 15px;
+    margin-top: -140px;
+    transform-origin: top left;
+}
+
+#certificate-body .button-section {
+    position: relative;
+    text-align: center;
+}
+
+#certificate-body .button-section .icon {
+    padding: 5px 10px;
+    font-size: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+#certificate-body .button-section .info-tooltip {
+    position: absolute;
+    display: inline-block;
+    bottom: 55px;
+    padding: 10px 15px;
+    border-radius: 4px;
+    background: #222277;
+    color: #fff;
+    width: 300px;
+    left: -120px;
+    text-align: left;
+}
+
+#certificate-body .button-section .info-tooltip .down-arrow {
+    position: absolute;
+    color: #222277;
+    font-size: 56px;
+    bottom: -22px;
+    left: 126px;
+}
+
+#certificate-body .button-section .info-tooltip ul li {
+    margin: 10px 0;
+    font-size: 22px;
+    line-height: 25px;
+    list-style: none;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#certificate-body .certificate-template-img {
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    z-index: -1;
+}
+
+#certificate-body .text-section {
+    padding-top: 270px;
+}
+
+#certificate-body .certificate-heading {
+    font-size: 70px;
 }
 
 #certificate-body .cert-line-1 {
@@ -752,7 +787,8 @@ a:hover, a:focus {
 
 #certificate-body .cert-date {
     font-family: 'Electrolize', cursive;
-    font-size: 22px;    
+    font-size: 22px;  
+    text-align: center;  
 }
 
 #certificate-body .site-name {
@@ -767,13 +803,15 @@ a:hover, a:focus {
     text-align: left;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #7280b5;
-    word-break: break-all;
+    text-align: center;
 }
 
 #certificate-body .cert-code textarea {
     width: 100%;
     border: none;
     outline: none;
+    background: transparent;
+    text-align: center;
 }
 
 #certificate-template-image {

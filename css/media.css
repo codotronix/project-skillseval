@@ -28,6 +28,10 @@
         margin-top: 80px;
     }
 
+    #certificate-body {
+        margin-top: -80px;
+    }
+
     .dev-in-progress-msg {
         top: 315px;
         right: -118px;
