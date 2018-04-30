@@ -1,0 +1,11 @@
+<div class="modal-mask" data-ng-show="mvm.infoModal.isVisible" data-ng-click="mvm.hideInfoModal()">
+    <div class="modal-box">
+        <div class="heading">
+            <i class="fa fa-times close-modal" data-ng-click="mvm.hideInfoModal()"></i>
+            {{mvm.infoModal.title}}
+        </div>        
+        <div class="body">
+            {{mvm.infoModal.body}}
+        </div>        
+    </div>
+</div>

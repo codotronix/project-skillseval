@@ -9,7 +9,6 @@
         vm.showInfoTooltip = false;
         vm.adjustDisplayForCert = adjustDisplayForCert;
         vm.backToOriginalSize = backToOriginalSize;
-        vm.backToHome = backToHome;
 
         var certCodeArguments = [
             "nameOfUser",
@@ -102,11 +101,6 @@
             });
 
             window.scrollTo(550, 120);
-        }
-
-
-        function backToHome () {
-            $location.path('/home');
         }
     }
 })();
