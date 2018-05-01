@@ -23,8 +23,7 @@
         {
             "name": "Dashboard",
             "icon": "fa fa-line-chart",
-            "url": "#!/learn",
-            "notImplemented": true,
+            "url": "#!/exam/viewcertificate",
             "desc": "Here you will find the marksheets, certificates, acheivements and all the glories that you have earned and other vital statistics that will help you scale and understand your progress better."
         }
     ]
