@@ -1080,6 +1080,7 @@ a:hover, a:focus {
     position: fixed;    
     right: 0;
     background: #000;
+    background: linear-gradient(to right, #000, #000, #4b00ff,#000, #000);
     z-index: 999999;
 }
 
