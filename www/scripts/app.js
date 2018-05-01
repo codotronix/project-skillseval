@@ -41,25 +41,25 @@
 
 
         //var prevPageY = 0;
-        $(document).on('scroll', function(e){
+        // $(document).on('scroll', function(e){
 
-            //console.log(e);
+        //     //console.log(e);
 
-            if($(window).width() <= 600) {
-                return;
-            }
+        //     if($(window).width() <= 600) {
+        //         return;
+        //     }
 
-            //going up
-            if ($(window).scrollTop() < 70) {
-                $('body').removeClass('scrollingDown');
-            }
+        //     //going up
+        //     if ($(window).scrollTop() < 70) {
+        //         $('body').removeClass('scrollingDown');
+        //     }
 
-            //coming down
-            else {
-                $('body').addClass('scrollingDown');          
-            }
+        //     //coming down
+        //     else {
+        //         $('body').addClass('scrollingDown');          
+        //     }
 
-            //prevPageY = e.originalEvent.pageY;
-        });
+        //     //prevPageY = e.originalEvent.pageY;
+        // });
     }]);
 })();
