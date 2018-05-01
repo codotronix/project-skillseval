@@ -1,4 +1,4 @@
-<div class="footer-button-panel">
+<div class="footer-button-panel" data-ng-if="$root.pageID !== 'EXAMENV' && $root.pageID !== 'AUTH' && $root.pageID !== 'CERTIFICATE'">
     <div class="inner-container">
         <i class="fa fa-home icon" data-ng-click="mvm.goToHome()"></i>
         <i class="fa fa-star icon" data-ng-click="mvm.goToBookmarks()"></i>
@@ -6,6 +6,6 @@
 
         <i class="fa fa-share-alt icon" data-ng-click="mvm.showInfoModal('Sharing is not yet implemented. However, you can visit knexaa page at facebook.com/knexaa')"></i>
 
-        <i class="fa fa-bars icon"></i>
+        <i class="fa fa-bars icon" data-ng-click="mvm.goToSettings()"></i>
     </div>
 </div>

@@ -3,6 +3,17 @@
 * MEDIA QUERIES START HERE
 ***************************************************************/
 @media (max-width: 600px) {
+}
+
+@media (min-width: 500px) {
+
+    .auth-container {
+        width: 400px;
+        margin: 100px auto;
+    }
+}
+
+@media (max-width: 767px) {
 
     body,
     body.translucent {
@@ -44,17 +55,9 @@
         background: rgba(0, 0, 0, .5);
     }
 
-}
-
-@media (min-width: 500px) {
-
-    .auth-container {
-        width: 400px;
-        margin: 100px auto;
+    .exam-stats .panel-body div {
+        padding: 5px 2px;
     }
-}
-
-@media (max-width: 767px) {
     
     .header {
         /*text-align: center;*/
@@ -167,6 +170,10 @@
         padding-top: 55px;
         background: #4b00ff !important;
         color: #fff !important;
+    }
+
+    .footer-button-panel {
+        display: block;
     }
 }
 /************* END OF MEDIA QUERIES ***************************/

@@ -6,11 +6,14 @@
     function mainController ($window, $location, $sce, modalService, persistenceService, $rootScope) {
         var mvm = this;
         mvm.devInProgressMsg = undefined;
-        mvm.infoModal = {};
+        
+        mvm.infoModal = modalService.getInfoModal();
         mvm.infoModal.isVisible = false;
+
         mvm.showInfoModal = showInfoModal;
         mvm.hideInfoModal = hideInfoModal;
         mvm.gotoPrevPage = gotoPrevPage;
+        mvm.goToSettings = goToSettings;
         mvm.goToHome = goToHome;
         mvm.goToBookmarks = goToBookmarks;
         mvm.isLoaderVisible = modalService.isLoaderVisible;
@@ -39,6 +42,10 @@
 
         }
 
+        function goToSettings () {
+            $location.path('/settings');
+        }
+
         function updateProfilePicture () {
             $rootScope.profileImgUrl = persistenceService.getProfilePictureUrl();
             // setTimeout(function () {
@@ -51,18 +58,17 @@
             document.getElementById(elemID).select();
             document.execCommand('copy');
 
-            alert("Copied to clipboard...");
+            // alert("Copied to clipboard...");
+            modalService.showInfoModal("Certificate code successfully copied to clipboard. Paste it and keep it in someplace safe.", "Copy Successful");
         }
 
 
         function showInfoModal (body, title) {
-            mvm.infoModal.title = title || 'Hi there!';
-            mvm.infoModal.body = body;
-            mvm.infoModal.isVisible = true;
+            modalService.showInfoModal(body, title);
         }
 
         function hideInfoModal () {
-            mvm.infoModal.isVisible = false;
+            modalService.hideInfoModal();
         }
         
     }

@@ -1,7 +1,10 @@
-<div id="topicTemplate">
+<div id="topic-template">
     <!-- <div data-ng-include="'subheader.html'"></div> -->
 
-    <div class="heading" data-ng-if="vm.topics.mighty">Select a Quick Exam</div>
+    <div class="heading" data-ng-if="vm.topics.mighty">
+        <i class="fa fa-arrow-left back-btn" data-ng-click="mvm.gotoPrevPage()"></i>
+        Select Quick Exam
+    </div>
 
     <div class="mighty-quick-exams" data-ng-if="vm.topics.mighty">
         <div data-ng-repeat="qe in vm.quickExams" class="lib-card coloured-card col-xs-12 col-sm-4 col-md-2">
