@@ -1080,7 +1080,7 @@ a:hover, a:focus {
     position: fixed;    
     right: 0;
     background: #000;
-    z-index: 99999;
+    z-index: 999999;
 }
 
 .footer-button-panel .inner-container {
