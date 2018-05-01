@@ -2,7 +2,21 @@
 /***************************************************************
 * MEDIA QUERIES START HERE
 ***************************************************************/
-@media (max-width: 600px) {
+
+@media (min-width: 768px) {
+    .footer-button-panel {
+        top: 0;
+    }
+
+    .footer-button-panel .inner-container {
+        width: 100px;
+    }
+
+    .footer-button-panel .inner-container .icon {
+        display: inline-block;
+        padding: 10px;
+        float: left;
+    }
 }
 
 @media (min-width: 500px) {
@@ -173,7 +187,21 @@
     }
 
     .footer-button-panel {
+        bottom: 0;
+        left: 0;
+        height: 50px;
         display: block;
+    }
+
+    .footer-button-panel .inner-container {
+        display: table;
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-button-panel .inner-container .icon {
+        display: table-cell;
+        padding: 10px 0;
     }
 }
 /************* END OF MEDIA QUERIES ***************************/
