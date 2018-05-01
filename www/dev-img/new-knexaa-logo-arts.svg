@@ -190,15 +190,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.2"
-     inkscape:cx="-4266.8874"
-     inkscape:cy="583.20739"
+     inkscape:zoom="1.5229603"
+     inkscape:cx="-4039.2405"
+     inkscape:cy="1052.5316"
      inkscape:document-units="px"
      inkscape:current-layer="layer2"
      showgrid="true"
      showborder="false"
      inkscape:snap-global="false"
-     showguides="false"
+     showguides="true"
      inkscape:window-width="1366"
      inkscape:window-height="719"
      inkscape:window-x="0"
@@ -214,7 +214,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -2139,7 +2139,7 @@
        inkscape:export-filename="/media/lubuntu/Study/Knexaa/first-fb-message.png"
        inkscape:export-xdpi="101.0881"
        inkscape:export-ydpi="101.0881"
-       transform="translate(-2700.8691,2534.6638)">
+       transform="translate(-2480.8691,2549.6638)">
       <rect
          style="opacity:1;fill:#0000ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="rect4923"
@@ -7278,7 +7278,7 @@
        inkscape:export-ydpi="84.529457"
        inkscape:export-xdpi="84.529457"
        id="g6721"
-       transform="matrix(1.2015137,0,0,1.1318452,-3183.373,-2052.831)">
+       transform="matrix(0.68444443,0,0,0.64475765,-2692.1597,-1405.0108)">
       <g
          id="g6723"
          transform="translate(947.96365,236.66577)">
@@ -7947,5 +7947,68 @@
         </g>
       </g>
     </g>
+    <g
+       id="g5933"
+       inkscape:export-filename="/media/lubuntu/Study/Codes/github/project-skillseval/www/images/knexaa-wheel-180.png"
+       inkscape:export-xdpi="75.87838"
+       inkscape:export-ydpi="75.87838">
+      <path
+         inkscape:connector-curvature="0"
+         id="path5857"
+         d="m -4039.4124,-100.0439 a 93.004103,93.004103 0 0 0 -93.0034,93.0033143 93.004103,93.004103 0 0 0 93.0034,93.0050697 93.004103,93.004103 0 0 0 93.005,-93.0050697 93.004103,93.004103 0 0 0 -93.005,-93.0033143 z m 0,12.970314 a 80.033296,80.033296 0 0 1 80.0346,80.0330003 80.033296,80.033296 0 0 1 -80.0346,80.0329927 80.033296,80.033296 0 0 1 -80.033,-80.0329927 80.033296,80.033296 0 0 1 80.033,-80.0330003 z"
+         style="opacity:1;fill:#0000ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         inkscape:export-filename="/media/lubuntu/Study/Codes/github/project-skillseval/www/images/knexaa-wheel-160.png"
+         inkscape:export-xdpi="71.91349"
+         inkscape:export-ydpi="71.91349" />
+      <path
+         inkscape:export-ydpi="71.91349"
+         inkscape:export-xdpi="71.91349"
+         inkscape:export-filename="/media/lubuntu/Study/Codes/github/project-skillseval/www/images/knexaa-wheel-160.png"
+         style="opacity:1;fill:#0000ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="M -4039.4125,-114.02899 A 107.03015,107.03015 0 0 0 -4146.4418,-6.9997512 107.03015,107.03015 0 0 0 -4039.4125,100.03151 107.03015,107.03015 0 0 0 -3932.3813,-6.9997512 107.03015,107.03015 0 0 0 -4039.4125,-114.02899 Z m 0,14.926381 a 92.103199,92.103199 0 0 1 92.1047,92.1028578 92.103199,92.103199 0 0 1 -92.1047,92.1028492 92.103199,92.103199 0 0 1 -92.1029,-92.1028492 92.103199,92.103199 0 0 1 92.1029,-92.1028578 z"
+         id="path5865"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:export-ydpi="71.91349"
+         inkscape:export-xdpi="71.91349"
+         inkscape:export-filename="/media/lubuntu/Study/Codes/github/project-skillseval/www/images/knexaa-wheel-160.png"
+         style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="m -4039.4125,-107.13922 a 100.1202,100.1202 0 0 0 -100.1194,100.119352 100.1202,100.1202 0 0 0 100.1194,100.121241 100.1202,100.1202 0 0 0 100.1212,-100.121241 100.1202,100.1202 0 0 0 -100.1212,-100.119352 z m 0,13.962723 a 86.156948,86.156948 0 0 1 86.1584,86.156629 86.156948,86.156948 0 0 1 -86.1584,86.156621 86.156948,86.156948 0 0 1 -86.1566,-86.156621 86.156948,86.156948 0 0 1 86.1566,-86.156629 z"
+         id="path5843"
+         inkscape:connector-curvature="0" />
+      <g
+         id="g5926">
+        <path
+           inkscape:connector-curvature="0"
+           id="path5859"
+           d="m -4039.5233,-100.58719 0,12.972292 a 80.033296,80.033296 0 0 1 56.726,23.736558 l 9.146,-9.145915 a 93.004103,93.004103 0 0 0 -65.872,-27.562935 z"
+           style="opacity:1;fill:#0000ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           inkscape:connector-curvature="0"
+           style="opacity:1;fill:#0000ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           d="m -4039.5233,-100.58719 0,12.972292 a 80.033296,80.033296 0 0 1 56.726,23.736558 l 9.146,-9.145915 a 93.004103,93.004103 0 0 0 -65.872,-27.562935 z"
+           id="path5861" />
+        <path
+           style="opacity:1;fill:#0000ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           d="m -4039.5402,-114.65421 0,14.928653 a 92.103199,92.103199 0 0 1 65.281,27.316292 l 10.5252,-10.525219 a 107.03015,107.03015 0 0 0 -75.8062,-31.719726 z"
+           id="path5867"
+           inkscape:connector-curvature="0" />
+        <path
+           id="path5869"
+           d="m -4039.5402,-114.65421 0,14.928653 a 92.103199,92.103199 0 0 1 65.281,27.316292 l 10.5252,-10.525219 a 107.03015,107.03015 0 0 0 -75.8062,-31.719726 z"
+           style="opacity:1;fill:#0000ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           inkscape:connector-curvature="0" />
+        <path
+           inkscape:connector-curvature="0"
+           style="opacity:1;fill:#0000ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           d="m -4039.5319,-107.72408 0,13.964853 a 86.156948,86.156948 0 0 1 61.0664,25.552732 l 9.8457,-9.845703 a 100.1202,100.1202 0 0 0 -70.9121,-29.671882 z"
+           id="path5813" />
+      </g>
+    </g>
+    <path
+       inkscape:connector-curvature="0"
+       id="path5847"
+       d="m -4004.0746,-156.97028 0,13.96486 a 86.156948,86.156948 0 0 1 61.0664,25.55273 l 9.8457,-9.8457 a 100.1202,100.1202 0 0 0 -70.9121,-29.67189 z"
+       style="opacity:1;fill:#0000ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
   </g>
 </svg>

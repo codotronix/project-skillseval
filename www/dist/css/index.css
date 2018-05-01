@@ -1077,27 +1077,20 @@ a:hover, a:focus {
 }
 
 .footer-button-panel {
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    position: fixed;    
     right: 0;
-    height: 50px;
     background: #000;
-    display: none;
-    z-index: 99;
+    background: linear-gradient(to right, #000, #000, #4b00ff,#000, #000);
+    z-index: 999999;
 }
 
 .footer-button-panel .inner-container {
-    display: table;
-    width: 100%;
-    text-align: center;
+    width: 100px;
 }
 
 .footer-button-panel .inner-container .icon {
-    display: table-cell;
     font-size: 30px;
     color: #fff;
-    padding: 10px 0;
 }
 
 .modal-mask {

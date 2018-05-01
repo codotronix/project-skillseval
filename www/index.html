@@ -19,15 +19,58 @@
             .modal.loading-modal {
                 display: block;
                 background: #000;
-                z-index: 999999;
+                background: linear-gradient(to right, #000, #000, #4b00ff,#000, #000);
+                z-index: 9999999;
                 text-align: center; 
             }
 
             .loading-img-container {
-                text-align: center;
-                margin-top: 150px;
-                margin-top: 40vh;
+                /*text-align: center;*/
+                /* margin-top: 150px; */
+                /* margin-top: 40vh; */
+                margin: 35vh auto;
+                position: relative;
+                display: inline-block;
+                width: 180px;
+                height: 180px;
+                background: #000;
+                border-radius: 50%;
+                /*display: inline-block;*/
+                /* padding: 20px 35px; */
+                /*border-radius: 50%;
+                background: #000;
+                width: 160px;
+                height: 160px;
+                padding-top: 18px;*/
             }
+
+            #knexaa-logo {
+                position: absolute;
+                top: 45px;
+                left: 55px;
+            }
+
+            #knexaa-wheel {
+                animation-name: knexaa-wheel-rotate;
+                animation-duration: 2s;
+                animation-timing-function: linear;
+                /*animation-delay: 2s;*/
+                animation-iteration-count: infinite;
+                /*animation-direction: alternate;*/
+            }
+
+            @keyframes knexaa-wheel-rotate {
+                0%   {transform: rotate(0deg);}
+                12.5%  {transform: rotate(45deg);}
+                25%  {transform: rotate(90deg);}
+                37.5%  {transform: rotate(135deg);}
+                50%  {transform: rotate(180deg);}
+                62.5%  {transform: rotate(225deg);}
+                75%  {transform: rotate(270deg);}
+                87.5%  {transform: rotate(315deg);}
+                100%  {transform: rotate(360deg);}
+            }
+
         </style>
 
         <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
@@ -69,11 +112,15 @@
 
         <div class="modal loading-modal" data-ng-show="mvm.isLoaderVisible()">
             <div class="loading-img-container">
-                <img src="images/knexaa-min-75x78.png" alt="Loading...">
+                <!-- <img src="images/knexaa-min-75x78.png" alt="Loading...">
                 <br/>
                 <img src="images/knexaa-loader-bar-80x11.gif" alt="Please wait...">
                 <br/>
-                <span>Please wait...</span>
+                <span>Please wait...</span> -->
+
+                <!-- New Loader -->
+                <img id="knexaa-wheel" src="images/knexaa-wheel-180.png" alt="Loading...">
+                <img id="knexaa-logo" src="images/knexaa-min-75x78.png" alt="Loading...">
             </div>
         </div>
 
