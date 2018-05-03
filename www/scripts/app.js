@@ -40,6 +40,10 @@
         });
 
 
+        $(window).on('resize', function (ev) {
+            $rootScope.$emit('WINDOW_RESIZED', ev);
+        })
+
         //var prevPageY = 0;
         // $(document).on('scroll', function(e){
 
@@ -55,7 +59,7 @@
         //     }
 
         //     //coming down
-        //     else {
+        //     else {\
         //         $('body').addClass('scrollingDown');          
         //     }
 

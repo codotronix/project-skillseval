@@ -25,7 +25,12 @@
 
         function init () {
             modalService.showLoader();
-            decodeCertificate();            
+            decodeCertificate();
+
+            //Also adjust the display on resize, i.e. Orientation Change
+            $rootScope.$on('WINDOW_RESIZED', function () {
+                adjustDisplayForCert();
+            });        
         }
 
         function decodeCertificate () {
@@ -102,5 +107,7 @@
 
             window.scrollTo(550, 120);
         }
+
+
     }
 })();
