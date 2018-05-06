@@ -10,6 +10,14 @@
         //     }
         // });
 
+        $rootScope.typeof = function (obj) {
+            return typeof(obj);
+        };
+
+        $rootScope.isArray = function (obj) {
+            return Array.isArray(obj);
+        }
+
         if(angular._9.hostType === 'app') {
             $rootScope.isMobileApp = true;
         }

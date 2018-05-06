@@ -11,11 +11,17 @@
         "webRoot": "",
         "appRoot": "https://knexaa.bitbucket.io",
         "dataRoot": "data",
+        "libRoots": {
+            "exam": "xlib",
+            "memcards": "memcardlib"
+        },
         "xlib": {
             "index": "raw:xlib",
             "coding": "raw:xlib/coding"
         },
-        
+        "memcardlib": {
+            "index": "raw:memcardlib"
+        },
         "config": {
             "homeConfig": "configs/homeConfig.json"
         },

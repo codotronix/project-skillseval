@@ -1,0 +1,20 @@
+<div id="memcardsTemplate">
+    <!-- <div data-ng-include="'subheader.html'"></div> -->
+
+    <div class="heading">
+        <i class="fa fa-arrow-left back-btn" data-ng-click="mvm.gotoPrevPage()"></i>
+        {{vm.cardTitle}}
+    </div>
+
+    <div class="">
+        <div data-ng-repeat="card in vm.cards track by $index" class="mem-card"
+         data-ng-class="{'active': $index === vm.activeCardIndex}">
+            <div class="inner-container">
+                <label class="title font-aldrich" data-ng-bind="card.title"></label>
+                <p>
+                    {{card.desc}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

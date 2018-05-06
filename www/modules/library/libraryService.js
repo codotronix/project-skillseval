@@ -8,8 +8,8 @@
 			getLibrary: getLibrary
 		}
 
-		function getLibrary (libName) {
-			return ajaxService.doGet(urlService.getLibraryUrl(libName));
+		function getLibrary (libName, libType) {
+			return ajaxService.doGet(urlService.getLibraryUrl(libName, libType));
 		}
 	}
 })();

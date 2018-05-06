@@ -6,7 +6,7 @@
                 To leave the exam anytime click on either "Submit" or "Abort" button located at the bottom of the page
             </li>
             <li>
-                This is a free tool for self evaluation. So, cheat if you want,  no one cares.
+                This is a free tool for self evaluation. So, try not to cheat.
             </li>
         </ul>
 
@@ -41,8 +41,6 @@
                 </div>
             </div>
 
-
-            
             <!-- SingleAnsMCQ Options STARTS Here-->
             <div class="panel-body options-container"
             data-ng-if="(qa.key && qa.key[0] === 'A') || (qa.ans && typeof(qa.ans) === 'string' && qa.ans.length === 1)" 
@@ -80,7 +78,7 @@
 
             <!-- MultiAnsMCQ Options STARTS Here-->
             <div class="panel-body options-container" 
-            data-ng-if="(qa.key && qa.key[0] === 'B') || (qa.ans && Array.isArray(qa.ans))"
+            data-ng-if="(qa.key && qa.key[0] === 'B') || (qa.ans && isArray(qa.ans))"
             data-ng-init="qa.chosenAns={}; qa.type='B';">
                 <div data-ng-repeat="op in qa.options">
 

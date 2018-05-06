@@ -1,0 +1,15 @@
+{
+    "groupLibName": "index",
+    "groupSubjectType": "library",  
+    "list":
+    [
+        {
+            "name": "Sample Cards",
+            "path": "sample",
+            "subjectType": "topic"
+        },
+        {
+            "name": "Coding"
+        }
+    ]
+}

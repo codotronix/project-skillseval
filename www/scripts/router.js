@@ -1,6 +1,11 @@
 (function(){
 	angular.module("skillseval")
-	.config(["$routeProvider", function ($routeProvider) {
+	.config(["$routeProvider", "$locationProvider", 
+		function ($routeProvider, $locationProvider) {
+
+		// use the HTML5 History API
+        $locationProvider.html5Mode(true);
+
 
 		$routeProvider
 
@@ -32,15 +37,20 @@
 		})
 
 
-		.when("/library/:libName", {
+		.when("/library", {
+			redirectTo: "/home"
+		})
+		
+		.when("/library/exam/:libName", {
 			templateUrl: "modules/library/libraryTemplate.html",
 			controller: "libraryController",
 			controllerAs: "vm",
 			data: {
-				pageID: "LIBRARY"
+				pageID: "EXAMLIBRARY"
 			}
 		})
-		.when("/library/:libName/:topic", {
+
+		.when("/library/exam/:libName/:topic", {
 			templateUrl: "modules/topic/topicTemplate.html",
 			controller: "topicController",
 			controllerAs: "vm",
@@ -48,6 +58,27 @@
 				pageID: "TOPIC"
 			}
 		})
+
+		.when("/library/memcards/:libName", {
+			templateUrl: "modules/library/libraryTemplate.html",
+			controller: "libraryController",
+			controllerAs: "vm",
+			data: {
+				pageID: "MEMCARDSLIBRARY"
+			}
+		})
+
+
+		.when("/library/memcards/:libName/:memcard", {
+			templateUrl: "modules/memcards/memcardTemplate.html",
+			controller: "memcardController",
+			controllerAs: "vm",
+			data: {
+				pageID: "MEMCARD"
+			}
+		})
+
+		
 		.when("/examenv", {
 			templateUrl: "modules/exam/examTemplate.html",
 			controller: "examController",

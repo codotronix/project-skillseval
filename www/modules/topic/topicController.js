@@ -12,11 +12,30 @@
         vm.startExam = startExam;
         vm.startCustomExam = startCustomExam;
 
+        //A library can be an "exam" library or "memcards" library
+        var libType = undefined;
+
         init();
 
         function init () {
             modalService.showLoader();
+            //identifyLibraryType();
             getTopics();            
+        }
+
+        /*
+        * This function will identify the library type,
+        * i.e. whether it is an "exam" or "memcards"
+        * from libType
+        * If not found in possible libTypes, redirect back to /library
+        */
+        function identifyLibraryType () {
+            //$location.$$path usually gives
+            // "/library/exam/:libname"
+            // "/library/memcards/:libname"
+            libType = $location.$$path.split('/')[2];
+
+            //console.log("libType = " + libType);
         }
 
         function getTopics () {
@@ -31,8 +50,8 @@
         * and send back to Library Index page
         */
         function resetToLibraryIndexPage () {
-            console.log("Sending back to Library Index Page...");
-            $location.path("/library/index");
+            //console.log("Sending back to Library Index Page...");
+            $location.path("/library");
         }
         
 

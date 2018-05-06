@@ -1,0 +1,48 @@
+{
+    "groupSubjectType": "topic",
+    "groupLibName": "coding",
+    "list":
+    [
+        {
+            "name": "C"
+        },
+        {
+            "name": "C++",
+            "path": "cpp"
+        },
+        {
+            "name": "C#",
+            "path": "cs"
+        },
+        {
+            "name": "Java"
+        },
+        {
+            "name": "Python",
+            "notImplemented": true
+        },
+        {
+            "name": "Javascript",
+            "path": "js",
+            "notImplemented": true
+        },
+        {
+            "name": "AngularJS",
+            "path": "angularjs",
+            "notImplemented": true
+        },
+        {
+            "name": "Node.js",
+            "path": "nodejs",
+            "notImplemented": true
+        },
+        {
+            "name": "HTML",
+            "notImplemented": true
+        },
+        {
+            "name": "CSS",
+            "notImplemented": true
+        }
+    ]
+}
