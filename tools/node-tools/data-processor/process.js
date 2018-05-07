@@ -39,7 +39,7 @@ const processData = (filelist) => {
         //if file is index.json, 
         //then Encrypt it, 
         //Name it index.enc.json
-        if(src.endsWith("index.json")) {
+        if(src.endsWith(".json")) {
             createEncryptedFile(src);
         }
 

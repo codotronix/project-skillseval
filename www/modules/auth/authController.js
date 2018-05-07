@@ -23,7 +23,7 @@
                   // or whether we leave that to developer to handle.
                   console.log(">>>>>>> authResult ");
                   console.log(authResult);
-                  $location.path('/home');
+                  $location.path('#!/home');
                   return false;
                 },
                 uiShown: function() {

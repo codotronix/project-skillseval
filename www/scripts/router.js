@@ -4,7 +4,10 @@
 		function ($routeProvider, $locationProvider) {
 
 		// use the HTML5 History API
-        $locationProvider.html5Mode(true);
+		// Causing Error if hit domain.com/home on 1st load
+		// because there is not home until angular and router 
+		// and everything loads up
+        //$locationProvider.html5Mode(true);
 
 
 		$routeProvider
