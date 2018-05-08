@@ -1144,11 +1144,6 @@ a:hover, a:focus {
 }
 
 .mem-card {
-    display: none;
-}
-
-.mem-card.active {
-    display: block;
     position: relative;
     width: 500px;
     margin: 0 auto;
@@ -1160,5 +1155,41 @@ a:hover, a:focus {
     height: 450px;
     padding: 10px 15px;
     border-radius: 4px;
-    box-shadow: #443838 -6px 6px 8px 2px;    
+    box-shadow: #443838 -6px 6px 8px 2px; 
+    display: none;   
+}
+
+.mem-card .inner-container.active {
+    display: block;
+}
+
+.mem-card .card-info-panel {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: rgba(236, 196, 196, 0.7);
+    text-align: center;
+}
+.mem-card .card-info-panel .fa {
+    font-size: 30px;
+    height: 50px;
+    width: 50px;
+    background: rgba(0, 38, 255, 0.6);
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    padding-top: 10px;
+}
+
+.mem-card .card-info-panel .fa.inactive {
+    background: rgba(95, 75, 75, 0.5);
+}
+
+.mem-card .card-info-panel .total-cards-info {
+    font-size: 20px;
+    min-width: 100px;
+    display: inline-block;
+    font-weight: bold;
+    color: #000;
 }

@@ -210,4 +210,10 @@
         padding: 10px 0;
     }
 }
+
+@media (max-width: 600px) {
+    .mem-card {
+        width: 300px;
+    }
+}
 /************* END OF MEDIA QUERIES ***************************/
