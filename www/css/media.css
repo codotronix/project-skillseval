@@ -215,5 +215,9 @@
     .mem-card {
         width: 300px;
     }
+
+    .mem-card .inner-container {
+        height: 350px;
+    }
 }
 /************* END OF MEDIA QUERIES ***************************/
