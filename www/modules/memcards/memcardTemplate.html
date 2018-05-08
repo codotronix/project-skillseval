@@ -7,9 +7,24 @@
     </div>
 
     <div class="">
-        <div data-ng-repeat="card in vm.cards track by $index" class="mem-card"
-         data-ng-class="{'active': $index === vm.activeCardIndex}">
-            <div class="inner-container">
+        <div class="mem-card">
+            <div class="card-info-panel">
+                <i class="fa fa-chevron-left left" 
+                data-ng-click="vm.showLeftCard()"
+                data-ng-class="{'inactive': (vm.activeCardIndex === 0)}"></i>
+                <!-- <input type="text" class="form-control card-number" value="{{vm.activeCardIndex + 1}}"/> -->
+                <span class="total-cards-info">
+                    {{vm.activeCardIndex + 1}} / {{vm.cards.length}}
+                </span>
+                <i class="fa fa-chevron-right right" 
+                data-ng-click="vm.showRightCard()"
+                data-ng-class="{'inactive': (vm.activeCardIndex === (vm.cards.length-1))}"></i>
+            </div>
+            
+
+            <div class="inner-container" 
+            data-ng-repeat="card in vm.cards track by $index"
+            data-ng-class="{'active': $index === vm.activeCardIndex}">
                 <label class="title font-aldrich" data-ng-bind="card.title"></label>
                 <p>
                     {{card.desc}}

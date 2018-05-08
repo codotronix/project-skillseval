@@ -10,6 +10,8 @@
         vm.cards = undefined;
         vm.cardTitle = undefined;
         vm.activeCardIndex = 0;
+        vm.showLeftCard = showLeftCard;
+        vm.showRightCard = showRightCard;
 
         init();
 
@@ -56,6 +58,19 @@
         function resetToLibraryIndexPage () {
             //console.log("Sending back to Library Index Page...");
             $location.path("/library");
+        }
+
+
+        function showLeftCard () {
+            if(vm.activeCardIndex > 0) {
+                vm.activeCardIndex--;
+            }
+        }
+
+        function showRightCard () {
+            if(vm.activeCardIndex < (vm.cards.length-1)) {
+                vm.activeCardIndex++;
+            }
         }
 
     }
